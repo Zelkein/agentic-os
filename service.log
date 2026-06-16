@@ -1,0 +1,194 @@
+[Tue Jun 16 19:16:52 EDT 2026] Starting Agentic OS on port 3000...
+
+> agentic-os@1.0.0 predev
+> node scripts/predev.cjs
+
+
+> agentic-os@1.0.0 dev
+> node scripts/next-run.cjs dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.255.255.254:3001
+- Environments: .env
+✓ Ready in 1116ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          258989
+- Dir:          /home/zelkein/agentic-os/command-centre
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 258989 to stop it.
+[?25h
+[Tue Jun 16 19:17:06 EDT 2026] Starting Agentic OS on port 3000...
+
+> agentic-os@1.0.0 predev
+> node scripts/predev.cjs
+
+
+> agentic-os@1.0.0 dev
+> node scripts/next-run.cjs dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.255.255.254:3001
+- Environments: .env
+✓ Ready in 1054ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          258989
+- Dir:          /home/zelkein/agentic-os/command-centre
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 258989 to stop it.
+[?25h
+[Tue Jun 16 19:17:20 EDT 2026] Starting Agentic OS on port 3000...
+
+> agentic-os@1.0.0 predev
+> node scripts/predev.cjs
+
+
+> agentic-os@1.0.0 dev
+> node scripts/next-run.cjs dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.255.255.254:3001
+- Environments: .env
+✓ Ready in 991ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          258989
+- Dir:          /home/zelkein/agentic-os/command-centre
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 258989 to stop it.
+[?25h
+[Tue Jun 16 19:17:33 EDT 2026] Starting Agentic OS on port 3000...
+
+> agentic-os@1.0.0 predev
+> node scripts/predev.cjs
+
+
+> agentic-os@1.0.0 dev
+> node scripts/next-run.cjs dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.255.255.254:3001
+- Environments: .env
+✓ Ready in 1023ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          258989
+- Dir:          /home/zelkein/agentic-os/command-centre
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 258989 to stop it.
+[?25h
+[Tue Jun 16 19:17:47 EDT 2026] Starting Agentic OS on port 3000...
+
+> agentic-os@1.0.0 predev
+> node scripts/predev.cjs
+
+
+> agentic-os@1.0.0 dev
+> node scripts/next-run.cjs dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.255.255.254:3001
+- Environments: .env
+✓ Ready in 1146ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          258989
+- Dir:          /home/zelkein/agentic-os/command-centre
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 258989 to stop it.
+[?25h
+[Tue Jun 16 19:17:54 EDT 2026] Starting Agentic OS on port 3000...
+
+> agentic-os@1.0.0 predev
+> node scripts/predev.cjs
+
+
+> agentic-os@1.0.0 dev
+> node scripts/next-run.cjs dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.255.255.254:3001
+- Environments: .env
+✓ Ready in 986ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          258989
+- Dir:          /home/zelkein/agentic-os/command-centre
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 258989 to stop it.
+[?25h
+[Tue Jun 16 19:18:01 EDT 2026] Starting Agentic OS on port 3000...
+
+> agentic-os@1.0.0 predev
+> node scripts/predev.cjs
+
+
+> agentic-os@1.0.0 dev
+> node scripts/next-run.cjs dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.255.255.254:3001
+- Environments: .env
+✓ Ready in 902ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          258989
+- Dir:          /home/zelkein/agentic-os/command-centre
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 258989 to stop it.
+[?25h
+[Tue Jun 16 19:18:10 EDT 2026] Starting Agentic OS on port 3000...
+
+> agentic-os@1.0.0 predev
+> node scripts/predev.cjs
+
+
+> agentic-os@1.0.0 dev
+> node scripts/next-run.cjs dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.255.255.254:3001
+- Environments: .env
+✓ Ready in 659ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          258989
+- Dir:          /home/zelkein/agentic-os/command-centre
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 258989 to stop it.
+[?25h
+[Tue Jun 16 19:18:23 EDT 2026] Starting Agentic OS on port 3000...
+[Tue Jun 16 19:18:34 EDT 2026] Starting Agentic OS on port 3000...

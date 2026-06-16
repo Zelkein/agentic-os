@@ -10,6 +10,11 @@ LOG="/home/zelkein/agentic-os/service.log"
 
 cd "$CENTRE_DIR"
 
+# Source .env manually (systemd's EnvironmentFile chokes on some values)
+set -a
+source .env 2>/dev/null || true
+set +a
+
 # Ensure dependencies
 if [[ ! -d "node_modules" ]]; then
     npm install --no-audit --no-fund >> "$LOG" 2>&1
@@ -21,4 +26,4 @@ if [[ -f ".next/trace" ]]; then
 fi
 
 echo "[$(date)] Starting Agentic OS on port $PORT..." >> "$LOG"
-exec npm run dev >> "$LOG" 2>&1
+exec npm run dev
