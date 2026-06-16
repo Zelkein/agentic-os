@@ -47,7 +47,5 @@ agentic-os-v2/
 .env
 .env.local
 .env.production
-.env.example
 command-centre/.env
-
 .npmrc
