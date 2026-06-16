@@ -1,0 +1,6 @@
+[5]{id,product,capacity_btuh,seer,price,in_stock}:
+  1,HVAC-Unit-1,25000,14.2,3200,true
+  2,HVAC-Unit-2,30000,15.1,3800,true
+  3,HVAC-Unit-3,35000,15.8,4500,false
+  4,HVAC-Unit-4,40000,16.2,5200,true
+  5,HVAC-Unit-5,45000,16.5,5800,true

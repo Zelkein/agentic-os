@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "nova": {
+      "command": "/home/zelkein/.hermes/hermes-agent/venv/bin/hermes",
+      "args": ["mcp", "serve"],
+      "description": "Hermes cross-platform messaging bridge (Discord, Telegram, Slack)"
+    },
+    "shared-memory": {
+      "command": "node",
+      "args": ["/path/to/kilo-shared-memory/server.js"],
+      "description": "Cross-agent shared memory store. Agents use save_memory/search_memory to persist and recall durable facts across sessions.",
+      "env": {
+        "SHARED_MEMORY_ROOT": "/path/to/agentic-os-v2"
+      }
+    }
+  }
+}

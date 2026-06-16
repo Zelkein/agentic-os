@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "windows-computer-use": {
+      "transport": "http",
+      "url": "http://host.docker.internal:8899/mcp",
+      "enabled": true
+    }
+  }
+}

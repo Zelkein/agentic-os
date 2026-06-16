@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+:root {
+  /* Light mode colors (unchanged) */
+  --bg-primary: #FCF9F7;
+  --bg-secondary: #F6F3F1;
+  --bg-tertiary: #FFFFFF;
+  --bg-hover: rgba(147, 69, 42, 0.08);
+
+  --text-primary: #1B1C1B;
+  --text-secondary: #5E5E65;
+  --text-tertiary: #8B8B8F;
+
+  --border-color: rgba(218, 193, 185, 0.15);
+  --border-color-secondary: rgba(218, 193, 185, 0.2);
+  --border-color-tertiary: rgba(218, 193, 185, 0.25);
+
+  --accent-color: #93452A;
+  --accent-light: rgba(147, 69, 42, 0.08);
+
+  /* Component-level tokens */
+  --card-bg: #FFFFFF;
+  --card-bg-secondary: #FAFAF9;
+  --card-bg-tertiary: #FFFAF8;
+  --input-bg: #FFFFFF;
+  --input-bg-disabled: #F6F3F1;
+  --skeleton-bg: #EAE8E6;
+  --header-bg: rgba(252, 249, 247, 0.85);
+  --sidebar-bg: #F6F3F1;
+  --dropdown-bg: #f3f0ee;
+  --dropdown-hover: rgba(0, 0, 0, 0.05);
+  --warm-gray-bg: #EFEDEA;
+  --code-bg: #F6F3F1;
+  --pane-bg: #FCFBFA;
+  --modal-footer-bg: #FCFBFA;
+  --resize-handle: #D1D5DB;
+
+  /* Accent variants */
+  --accent-terracotta: #D97853;
+  --accent-terracotta-dark: #93452A;
+  --accent-terracotta-light-bg: #FFDBCF;
+  --accent-terracotta-text: #390C00;
+
+  /* Accent purple (GSD) */
+  --accent-purple: #6D28D9;
+  --accent-purple-light-bg: #F5F3FF;
+
+  /* Status colors */
+  --success: #6B8E6B;
+  --success-hover: #5A7A5A;
+  --error: #C04030;
+  --error-bg: #FFF5F3;
+  --warning: #D2783C;
+  --warning-bg: #FFFAF8;
+  --info: #3b82f6;
+  --info-bg: #EFF6FF;
+  --purple-bg: #F5F3FF;
+  --green-bg: rgba(107, 142, 107, 0.1);
+}
+
+html.dark {
+  /* ── Surface hierarchy (stepping up, neutral greys) ── */
+  --bg-primary: #111111;           /* darkest surface */
+  --bg-secondary: #161616;         /* sidebar, secondary panels */
+  --bg-tertiary: #1C1C1C;          /* elevated cards */
+  --bg-hover: rgba(232, 141, 92, 0.10);
+
+  /* ── Text (WCAG AA on #111111) ── */
+  --text-primary: #EBEBEB;         /* soft off-white, ~16:1 contrast */
+  --text-secondary: #A8A8A8;       /* medium grey, ~10:1 */
+  --text-tertiary: #777777;        /* muted grey, ~4.5:1, still visible */
+
+  /* ── Borders (warm neutral, more visible) ── */
+  --border-color: rgba(140, 130, 120, 0.22);
+  --border-color-secondary: rgba(140, 130, 120, 0.28);
+  --border-color-tertiary: rgba(140, 130, 120, 0.35);
+
+  /* ── Accent (terracotta amber) ── */
+  --accent-color: #E88D5C;
+  --accent-light: rgba(232, 141, 92, 0.14);
+
+  /* ── Surfaces (neutral stepping) ── */
+  --header-bg: rgba(17, 17, 17, 0.85);
+  --sidebar-bg: #141414;
+  --card-bg: #1C1C1C;
+  --card-bg-secondary: #181818;
+  --card-bg-tertiary: #151515;
+  --input-bg: #1D1D1D;
+  --input-bg-disabled: #181818;
+  --skeleton-bg: #202020;
+  --dropdown-bg: #1E1E1E;
+  --dropdown-hover: rgba(255, 255, 255, 0.06);
+  --warm-gray-bg: #202020;
+  --code-bg: #1A1A1A;
+  --pane-bg: #181818;
+  --modal-footer-bg: #161616;
+  --resize-handle: #2A2A2A;
+
+  /* ── Accent variants ── */
+  --accent-terracotta: #E88D5C;
+  --accent-terracotta-dark: #D4784A;
+  --accent-terracotta-light-bg: rgba(232, 141, 92, 0.18);
+  --accent-terracotta-text: #F0C4A8;
+
+  /* ── Accent purple (GSD) ── */
+  --accent-purple: #8B5CF6;
+  --accent-purple-light-bg: rgba(139, 92, 246, 0.14);
+
+  /* ── Status ── */
+  --success: #6CB86C;
+  --success-hover: #5DA85D;
+  --error: #E05550;
+  --error-bg: rgba(224, 85, 80, 0.16);
+  --warning: #E8A060;
+  --warning-bg: rgba(232, 160, 96, 0.14);
+  --info: #8E8E8E;
+  --info-bg: rgba(136, 136, 136, 0.12);
+  --purple-bg: rgba(140, 100, 248, 0.14);
+  --green-bg: rgba(108, 184, 108, 0.14);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 200ms, color 200ms;
+}
+
+/* ── Dark mode: force all white surfaces to grey ── */
+html.dark [style*="background-color:#FFFFFF"],
+html.dark [style*="background-color: #FFFFFF"],
+html.dark [style*="backgroundColor:#FFFFFF"],
+html.dark [style*="backgroundColor: #FFFFFF"],
+html.dark [style*="background:#FFFFFF"],
+html.dark [style*="background: #FFFFFF"],
+html.dark [style*="background-color:#ffffff"],
+html.dark [style*="background-color: #ffffff"],
+html.dark [style*="background-color:#FFF"],
+html.dark [style*="background-color: #FFF"],
+html.dark [style*="background-color:#FAFAF9"],
+html.dark [style*="background-color: #FAFAF9"],
+html.dark [style*="background-color:#FCF9F7"],
+html.dark [style*="background-color: #FCF9F7"],
+html.dark [style*="background-color:#FFFAF8"],
+html.dark [style*="background-color: #FFFAF8"],
+html.dark [style*="background-color:#F6F3F1"],
+html.dark [style*="background-color: #F6F3F1"],
+html.dark [style*="background-color:#FFF5F3"],
+html.dark [style*="background-color: #FFF5F3"],
+html.dark [style*="background-color:#FFF5F0"],
+html.dark [style*="background-color: #FFF5F0"],
+html.dark [style*="background-color:#f3f0ee"],
+html.dark [style*="background-color: #f3f0ee"],
+html.dark [style*="background-color:#EAE8E6"],
+html.dark [style*="background-color: #EAE8E6"],
+html.dark [style*="background-color:#EFF6FF"],
+html.dark [style*="background-color: #EFF6FF"],
+html.dark [style*="background-color:#F5F3FF"],
+html.dark [style*="background-color: #F5F3FF"],
+html.dark [style*="background-color:#FEF2F2"],
+html.dark [style*="background-color: #FEF2F2"],
+html.dark [style*="background-color:#EEE8E2"],
+html.dark [style*="background-color: #EEE8E2"],
+html.dark [style*="borderTopColor:\"#FFFFFF\""],
+html.dark [style*="borderTopColor: \"#FFFFFF\""],
+html.dark [style*="background:#f3f0ee"],
+html.dark [style*="background: #f3f0ee"] {
+  background-color: var(--card-bg) !important;
+}
+
+/* ── Color overrides (FOUC guard) ── */
+html.dark [style*="color:#6D28D9"],
+html.dark [style*="color: #6D28D9"] {
+  color: var(--accent-purple) !important;
+}
+
+html.dark [style*="color:#D97853"],
+html.dark [style*="color: #D97853"] {
+  color: var(--accent-terracotta) !important;
+}
+
+html.dark [style*="color:#5E5E65"],
+html.dark [style*="color: #5E5E65"] {
+  color: var(--text-secondary) !important;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+@keyframes ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes running-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes running-glow {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.12), 0 2px 8px rgba(99, 102, 241, 0.08); }
+  50% { box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.22), 0 2px 12px rgba(99, 102, 241, 0.14); }
+}
+
+.card-running {
+  animation: running-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pulse-text {
+  animation: pulse-opacity 2s ease-in-out infinite;
+}
+
+.custom-shadow {
+  box-shadow: 0px 12px 32px rgba(147, 69, 42, 0.06);
+}
+
+html.dark .custom-shadow {
+  box-shadow: 0px 12px 32px rgba(232, 141, 92, 0.10);
+}
+
+.dp-parent-split {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color-tertiary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color-tertiary) transparent;
+}
+
+@container (max-width: 720px) {
+  .dp-parent-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.terracotta-gradient {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-terracotta-dark) 100%);
+}
+
+.chat-markdown > :first-child {
+  margin-top: 0 !important;
+}
+.chat-markdown > :last-child {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,6 @@
+[2026-06-08T16:00:15.863Z] start: host=claude, reason=session_end, project=/mnt/c/agentic-os-v2
+[2026-06-08T16:00:15.903Z] journal: 3 entries across 3 sessions
+[2026-06-08T16:00:15.938Z] tier-promotion: db open skipped (Cannot find package 'better-sqlite3' imported from /home/zelkein/.hermes/profiles/nova/home/.ijfw/mcp-server/src/memory/fts5.js)
+[2026-06-08T16:00:15.972Z] wiki-compile: db open skipped (Cannot find package 'better-sqlite3' imported from /home/zelkein/.hermes/profiles/nova/home/.ijfw/mcp-server/src/memory/fts5.js)
+[2026-06-08T16:00:16.012Z] mark-completed: ok
+[2026-06-08T16:00:16.045Z] end: completed=4 failed=0

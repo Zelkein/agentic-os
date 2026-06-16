@@ -1,0 +1,7 @@
+[
+  { "id": 1, "product": "HVAC-Unit-1", "capacity_btuh": 25000, "seer": 14.2, "price": 3200, "in_stock": true },
+  { "id": 2, "product": "HVAC-Unit-2", "capacity_btuh": 30000, "seer": 15.1, "price": 3800, "in_stock": true },
+  { "id": 3, "product": "HVAC-Unit-3", "capacity_btuh": 35000, "seer": 15.8, "price": 4500, "in_stock": false },
+  { "id": 4, "product": "HVAC-Unit-4", "capacity_btuh": 40000, "seer": 16.2, "price": 5200, "in_stock": true },
+  { "id": 5, "product": "HVAC-Unit-5", "capacity_btuh": 45000, "seer": 16.5, "price": 5800, "in_stock": true }
+]

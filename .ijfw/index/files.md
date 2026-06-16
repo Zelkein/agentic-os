@@ -1,0 +1,1201 @@
+<!-- ijfw schema:1 codebase-index -->
+# Codebase index
+
+Generated: 2026-06-08T17:22:05Z
+Root: .
+
+Files: 1183
+
+## By file
+
+- `./.claude/commands/archive-gsd.md` (58 lines, .md) -- Mark a GSD project as complete. Each Level 3 project owns its own `.planning/`
+- `./.claude/commands/start-here.md` (298 lines, .md) -- The onboarding entry point for first-time users.
+- `./.claude/hooks/branch-guard.js` (162 lines, .js) -- const { execSync } = require('child_process');
+- `./.claude/hooks/gsd-check-update.js` (114 lines, .js) -- const fs = require('fs');
+- `./.claude/hooks/gsd-context-monitor.js` (194 lines, .js) -- const fs = require('fs');
+- `./.claude/hooks/gsd-prompt-guard.js` (96 lines, .js) -- const fs = require('fs');
+- `./.claude/hooks/gsd-statusline.js` (119 lines, .js) -- const fs = require('fs');
+- `./.claude/hooks/gsd-workflow-guard.js` (122 lines, .js) -- const fs = require('fs');
+- `./.claude/hooks/run-ccnotify.js` (96 lines, .js) -- const { spawn, spawnSync } = require(\"child_process\");
+- `./.claude/hooks/session-sync-notify.js` (96 lines, .js) -- const fs = require(\"fs\");
+- `./.claude/hooks/session-sync-prompt.js` (108 lines, .js) -- const fs = require(\"fs\");
+- `./.claude/hooks/session-sync-stop.js` (144 lines, .js) -- const fs = require(\"fs\");
+- `./.claude/hooks/session-sync-tool.js` (127 lines, .js) -- const fs = require(\"fs\");
+- `./.claude/hooks/session-sync.js` (134 lines, .js) -- const fs = require(\"fs\");
+- `./.claude/hooks/skill-auto-commit-worker.js` (21 lines, .js) -- const { spawnSync } = require(\"child_process\");
+- `./.claude/hooks/skill-auto-commit.js` (57 lines, .js) -- const path = require(\"path\");
+- `./.claude/hooks_info/ccnotify.py` (916 lines, .py) -- Claude Code Notify
+- `./.claude/skills/_lib/checkpoint.py` (211 lines, .py) -- Called via Bash from within a skill so phase state and final output land on disk
+- `./.claude/skills/customize/SKILL.md` (133 lines, .md) -- name: customize
+- `./.claude/skills/meta-skill-creator/SKILL.md` (620 lines, .md) -- name: meta-skill-creator
+- `./.claude/skills/meta-skill-creator/agents/analyzer.md` (274 lines, .md) -- Analyze blind comparison results to understand WHY the winner won and generate improvement suggestions.
+- `./.claude/skills/meta-skill-creator/agents/comparator.md` (202 lines, .md) -- Compare two outputs WITHOUT knowing which skill produced them.
+- `./.claude/skills/meta-skill-creator/agents/grader.md` (223 lines, .md) -- Evaluate expectations against an execution transcript and outputs.
+- `./.claude/skills/meta-skill-creator/eval-viewer/generate_review.py` (471 lines, .py) -- Reads the workspace directory, discovers runs (directories with outputs/),
+- `./.claude/skills/meta-skill-creator/references/schemas.md` (430 lines, .md) -- This document defines the JSON schemas used by skill-creator.
+- `./.claude/skills/meta-skill-creator/scripts/__init__.py` (0 lines, .py) -- <empty>
+- `./.claude/skills/meta-skill-creator/scripts/aggregate_benchmark.py` (401 lines, .py) -- Aggregate individual run results into benchmark summary statistics.
+- `./.claude/skills/meta-skill-creator/scripts/generate_report.py` (326 lines, .py) -- Takes the JSON output from run_loop.py and generates a visual HTML report
+- `./.claude/skills/meta-skill-creator/scripts/improve_description.py` (247 lines, .py) -- Takes eval results (from run_eval.py) and generates an improved description
+- `./.claude/skills/meta-skill-creator/scripts/package_skill.py` (136 lines, .py) -- Skill Packager - Creates a distributable .skill file of a skill folder
+- `./.claude/skills/meta-skill-creator/scripts/quick_validate.py` (102 lines, .py) -- Quick validation script for skills - minimal version
+- `./.claude/skills/meta-skill-creator/scripts/run_eval.py` (310 lines, .py) -- Tests whether a skill's description causes Claude to trigger (read the skill)
+- `./.claude/skills/meta-skill-creator/scripts/run_loop.py` (328 lines, .py) -- Combines run_eval.py and improve_description.py in a loop, tracking history
+- `./.claude/skills/meta-skill-creator/scripts/utils.py` (47 lines, .py) -- from pathlib import Path
+- `./.claude/skills/meta-synthesize-locals/SKILL.md` (56 lines, .md) -- name: meta-synthesize-locals
+- `./.claude/skills/meta-wrap-up/SKILL.md` (243 lines, .md) -- name: meta-wrap-up
+- `./.claude/skills/mkt-brand-voice/SKILL.md` (239 lines, .md) -- name: mkt-brand-voice
+- `./.claude/skills/mkt-brand-voice/references/build-questions.md` (205 lines, .md) -- Read this when running Mode 2 (Build). Ask a maximum of 8 questions.
+- `./.claude/skills/mkt-brand-voice/references/extraction-guide.md` (139 lines, .md) -- Read this when running Mode 1 (Extract) or Mode 3 (Auto-Scrape).
+- `./.claude/skills/mkt-brand-voice/references/playbook-questions.md` (252 lines, .md) -- Read this when running **Mode 3: Build → Playbook** (the deep opt-in variant).
+- `./.claude/skills/mkt-brand-voice/references/voice-profile-template.md` (165 lines, .md) -- This is the canonical format for `brand_context/voice-profile.md`.
+- `./.claude/skills/mkt-content-repurposing/SKILL.md` (158 lines, .md) -- name: mkt-content-repurposing
+- `./.claude/skills/mkt-content-repurposing/references/platform-emerging.md` (215 lines, .md) -- Newer or community-driven platforms where the rules are different. Lower competition, higher trust, different expectatio
+- `./.claude/skills/mkt-content-repurposing/references/platform-text.md` (155 lines, .md) -- What actually works on each platform right now. Format specs, what the algorithm rewards, post structures that perform, 
+- `./.claude/skills/mkt-content-repurposing/references/platform-visual-video.md` (190 lines, .md) -- What drives results on visual and video-first platforms. Specs, what the algorithm actually rewards, structures that wor
+- `./.claude/skills/mkt-content-repurposing/references/voice-adaptation.md` (106 lines, .md) -- Your brand voice doesn't change per platform — the delivery does. Same person, different room. You wouldn't talk to a 
+- `./.claude/skills/mkt-copywriting/SKILL.md` (162 lines, .md) -- name: mkt-copywriting
+- `./.claude/skills/mkt-copywriting/references/classic-frameworks.md` (112 lines, .md) -- Reference material from the books that defined modern copywriting. These principles are decades old and still outperform
+- `./.claude/skills/mkt-copywriting/references/examples/good-post-1.md` (31 lines, .md) -- The best automation I ever built took 12 minutes.
+- `./.claude/skills/mkt-copywriting/references/examples/good-post-2.md` (25 lines, .md) -- Stop collecting AI tools. You don't need 14 of them.
+- `./.claude/skills/mkt-copywriting/references/persuasion-toolkit.md` (176 lines, .md) -- Practical writing techniques for persuasive copy. Load when generating any format.
+- `./.claude/skills/mkt-copywriting/references/variants-and-scoring.md` (167 lines, .md) -- Never ship the first version. Generate options, measure quality, then recommend tests.
+- `./.claude/skills/mkt-icp/SKILL.md` (147 lines, .md) -- name: mkt-icp
+- `./.claude/skills/mkt-icp/references/icp-template.md` (100 lines, .md) -- Exact format for `brand_context/icp.md`. All sections required.
+- `./.claude/skills/mkt-icp/references/interview-questions.md` (60 lines, .md) -- Ask a maximum of 8 from this bank. Prioritise based on what's already known from context. The goal is to surface the cus
+- `./.claude/skills/mkt-icp/references/research-methods.md` (116 lines, .md) -- How to extract customer profile data from public sources. The goal is real customer language and patterns — not assump
+- `./.claude/skills/mkt-positioning/SKILL.md` (151 lines, .md) -- name: mkt-positioning
+- `./.claude/skills/mkt-positioning/references/angle-frameworks.md` (120 lines, .md) -- Eight frameworks for generating positioning angles. Run the product through several and keep the 3-5 strongest options.
+- `./.claude/skills/mkt-positioning/references/competitive-search.md` (86 lines, .md) -- How to research competitor messaging before generating angles. This grounds positioning in market reality rather than as
+- `./.claude/skills/mkt-positioning/references/market-sophistication.md` (93 lines, .md) -- Based on Eugene Schwartz's awareness levels. The market stage determines which angle type will cut through. Using the wr
+- `./.claude/skills/mkt-positioning/references/positioning-output.md` (91 lines, .md) -- Exact format for `brand_context/positioning.md`. All sections required.
+- `./.claude/skills/mkt-ugc-scripts/SKILL.md` (227 lines, .md) -- name: mkt-ugc-scripts
+- `./.claude/skills/mkt-ugc-scripts/assets/reference-script-openclaw-loop.md` (18 lines, .md) -- This is the quality benchmark. Scripts should match this tone, structure, and energy.
+- `./.claude/skills/mkt-ugc-scripts/references/hook-library.md` (154 lines, .md) -- Hooks for talking-head delivery. These are designed to be spoken to camera — they work because of how they sound, not 
+- `./.claude/skills/mkt-ugc-scripts/references/research-to-script.md` (124 lines, .md) -- How to use `str-trending-research` output (or any research brief) to pick script topics that match the user's business a
+- `./.claude/skills/mkt-ugc-scripts/references/script-frameworks.md` (234 lines, .md) -- Proven structures for short-form talking-head video. Each framework includes the structure, timing breakdown, when to us
+- `./.claude/skills/mpt-mep-checklist/SKILL.md` (294 lines, .md) -- name: MEP Coordination Checklist
+- `./.claude/skills/ops-cron/SKILL.md` (171 lines, .md) -- name: ops-cron
+- `./.claude/skills/ops-cron/references/job-format.md` (157 lines, .md) -- Every scheduled job is a markdown file in `cron/jobs/` with YAML frontmatter and a freeform prompt body.
+- `./.claude/skills/patch/SKILL.md` (619 lines, .md) -- name: patch
+- `./.claude/skills/quickstart/SKILL.md` (122 lines, .md) -- name: quickstart
+- `./.claude/skills/str-ai-seo/SKILL.md` (169 lines, .md) -- name: str-ai-seo
+- `./.claude/skills/str-ai-seo/references/ai-visibility-audit.md` (69 lines, .md) -- Full methodology for assessing your current AI search presence before optimizing.
+- `./.claude/skills/str-ai-seo/references/authority-signals.md` (91 lines, .md) -- How to make content citable by AI systems. Based on the Princeton GEO study (KDD 2024) and cross-platform citation analy
+- `./.claude/skills/str-ai-seo/references/content-patterns.md` (285 lines, .md) -- Reusable content block patterns optimized for answer engines and AI citation.
+- `./.claude/skills/str-ai-seo/references/content-type-optimization.md` (79 lines, .md) -- How to optimize different content types for AI citation. Each section covers the goal, what to optimize, and the content
+- `./.claude/skills/str-ai-seo/references/monitoring-tools.md` (47 lines, .md) -- Tools and methods for tracking your presence in AI-generated answers.
+- `./.claude/skills/str-ai-seo/references/platform-ranking-factors.md` (152 lines, .md) -- Each AI search platform has its own search index, ranking logic, and content preferences. This guide covers what matters
+- `./.claude/skills/str-trending-research/SKILL.md` (200 lines, .md) -- name: str-trending-research
+- `./.claude/skills/str-trending-research/references/brief-template.md` (77 lines, .md) -- > Format for saved research briefs in `projects/str-trending-research/`.
+- `./.claude/skills/str-trending-research/references/research-methodology.md` (124 lines, .md) -- > Adapted from [last30days by Ronnie-Nutrition](https://github.com/Ronnie-Nutrition/last30days-skill).
+- `./.claude/skills/str-trending-research/references/synthesis-guide.md` (122 lines, .md) -- > Adapted from [last30days by Ronnie-Nutrition](https://github.com/Ronnie-Nutrition/last30days-skill).
+- `./.claude/skills/str-trending-research/scripts/last30days.py` (287 lines, .py) -- last30days - Research a topic from the last 30 days on Reddit + X.
+- `./.claude/skills/str-trending-research/scripts/lib/__init__.py` (3 lines, .py) -- <empty>
+- `./.claude/skills/str-trending-research/scripts/lib/cache.py` (129 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/dates.py` (101 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/dedupe.py` (74 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/env.py` (147 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/http.py` (130 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/models.py` (108 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/normalize.py` (98 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/openai_reddit.py` (226 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/reddit_enrich.py` (147 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/render.py` (215 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/schema.py` (303 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/score.py` (145 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/ui.py` (225 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/websearch.py` (226 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/str-trending-research/scripts/lib/xai_x.py` (178 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./.claude/skills/threat-model/README.md` (126 lines, .md) -- A Claude Code skill that builds a threat model for a target codebase. Two
+- `./.claude/skills/threat-model/SKILL.md` (156 lines, .md) -- name: threat-model
+- `./.claude/skills/threat-model/bootstrap.md` (420 lines, .md) -- > **Re-read note:** If you need this file mid-session and the Read tool
+- `./.claude/skills/threat-model/interview.md` (203 lines, .md) -- > **Re-read note:** If you need this file mid-session and the Read tool
+- `./.claude/skills/threat-model/schema.md` (189 lines, .md) -- > **Re-read note:** If you need this file mid-session and the Read tool
+- `./.claude/skills/tool-firecrawl-scraper/SKILL.md` (101 lines, .md) -- name: tool-firecrawl-scraper
+- `./.claude/skills/tool-firecrawl-scraper/references/api-guide.md` (360 lines, .md) -- ```python
+- `./.claude/skills/tool-firecrawl-scraper/references/known-issues.md` (165 lines, .md) -- 10 documented issues with prevention strategies. Read before any Firecrawl integration.
+- `./.claude/skills/tool-humanizer/SKILL.md` (166 lines, .md) -- name: tool-humanizer
+- `./.claude/skills/tool-humanizer/references/pattern-library.md` (154 lines, .md) -- 50+ detectable AI writing patterns organized by category. Each pattern includes detection criteria and severity (high = 
+- `./.claude/skills/tool-humanizer/references/replacement-guide.md` (131 lines, .md) -- How to replace AI patterns with human writing. Two modes: generic (no brand context) and voice-matched (with brand_conte
+- `./.claude/skills/tool-stitch/SKILL.md` (122 lines, .md) -- name: tool-stitch
+- `./.claude/skills/tool-youtube/SKILL.md` (158 lines, .md) -- name: tool-youtube
+- `./.claude/skills/tool-youtube/scripts/digest.py` (355 lines, .py) -- YouTube Digest: fetch latest videos from channels, extract transcripts, produce a digest.
+- `./.claude/skills/tool-youtube/scripts/setup.sh` (55 lines, .sh) -- set -e
+- `./.claude/skills/tool-youtube/scripts/transcript.py` (196 lines, .py) -- Download YouTube transcripts using yt-dlp. Outputs markdown (default) or VTT.
+- `./.claude/skills/triage/README.md` (95 lines, .md) -- A Claude Code skill that triages a batch of raw security-scanner findings:
+- `./.claude/skills/triage/SKILL.md` (1008 lines, .md) -- name: triage
+- `./.claude/skills/viz-excalidraw-diagram/SKILL.md` (163 lines, .md) -- name: viz-excalidraw-diagram
+- `./.claude/skills/viz-excalidraw-diagram/references/color-palette.md` (94 lines, .md) -- Style: Warm PaperBanana editorial — hand-drawn feel, warm cream background, playful but professional.
+- `./.claude/skills/viz-excalidraw-diagram/references/element-templates.md` (182 lines, .md) -- Copy-paste JSON templates for each Excalidraw element type. The `strokeColor` and `backgroundColor` values are placehold
+- `./.claude/skills/viz-excalidraw-diagram/references/evidence-and-depth.md` (84 lines, .md) -- How to build comprehensive, educational diagrams that teach — not just label.
+- `./.claude/skills/viz-excalidraw-diagram/references/json-schema.md` (71 lines, .md) -- | Type | Use For |
+- `./.claude/skills/viz-excalidraw-diagram/references/render_excalidraw.py` (176 lines, .py) -- Usage:
+- `./.claude/skills/viz-excalidraw-diagram/references/visual-patterns.md` (129 lines, .md) -- How to choose shapes, structure diagrams, and make the layout do the thinking.
+- `./.claude/skills/viz-interface-design/SKILL.md` (172 lines, .md) -- name: viz-interface-design
+- `./.claude/skills/viz-interface-design/references/critique.md` (66 lines, .md) -- Use this framework when reviewing a built interface — either your own work (Step 5 of the methodology) or when asked t
+- `./.claude/skills/viz-interface-design/references/example.md` (167 lines, .md) -- This reference demonstrates the subtle layering principle with specific implementation decisions. Use these patterns as 
+- `./.claude/skills/viz-interface-design/references/principles.md` (366 lines, .md) -- The complete design system for building interfaces that feel crafted, not assembled. Read this before writing any compon
+- `./.claude/skills/viz-interface-design/references/validation.md` (102 lines, .md) -- How to manage `.interface-design/system.md` — the file that carries design decisions across sessions.
+- `./.claude/skills/viz-nano-banana/SKILL.md` (129 lines, .md) -- name: viz-nano-banana
+- `./.claude/skills/viz-nano-banana/references/element-library.md` (71 lines, .md) -- SVG snippets for decorative elements, badges, figures, and connectors. Use these when building SVG blueprints (Mode B) o
+- `./.claude/skills/viz-nano-banana/references/layout-patterns.md` (108 lines, .md) -- Choose a layout based on how the concept behaves, not what it is. The layout should make the argument visible before any
+- `./.claude/skills/viz-nano-banana/references/styles.md` (139 lines, .md) -- Each style below is a complete prompt template. When generating, combine the style prefix with the user's specific conte
+- `./.claude/skills/viz-nano-banana/references/svg-construction.md` (109 lines, .md) -- For Mode B (SVG Blueprint) — when you need precise layout control before describing the composition to Gemini. The SVG
+- `./.claude/skills/viz-nano-banana/scripts/generate_image.py` (235 lines, .py) -- Generate images using Google's Nano Banana Pro (Gemini 3 Pro Image) API.
+- `./.claude/skills/viz-nano-banana/scripts/test_generate_image.py` (36 lines, .py) -- import importlib.util
+- `./.claude/skills/viz-stitch-design/SKILL.md` (153 lines, .md) -- name: viz-stitch-design
+- `./.claude/skills/viz-ugc-heygen/SKILL.md` (173 lines, .md) -- name: viz-ugc-heygen
+- `./.claude/skills/viz-ugc-heygen/references/api-reference.md` (197 lines, .md) -- All requests use `X-Api-Key` header with `HEYGEN_API_KEY` env var.
+- `./.claude/skills/viz-ugc-heygen/references/avatar-config.md` (102 lines, .md) -- | Name | Voice ID | Source |
+- `./.claude/skills/viz-ugc-heygen/references/platform-formats.md` (75 lines, .md) -- | Platform | Aspect | Resolution | Orientation |
+- `./.claude/skills/viz-ugc-heygen/references/prompt-optimizer.md` (108 lines, .md) -- For use with `generate_video_agent` — the one-shot prompt-to-video endpoint.
+- `./.claude/skills/viz-ugc-heygen/references/scripting-guide.md` (100 lines, .md) -- - **150 words/minute** at 1.0x speed
+- `./.claude/skills/viz-ugc-heygen/scripts/burn-captions.py` (222 lines, .py) -- Burn branded .ass captions onto a video using ffmpeg's native libass renderer.
+- `./.claude/skills/viz-ugc-heygen/scripts/setup.sh` (39 lines, .sh) -- set -e
+- `./.claude/skills/vuln-scan/SKILL.md` (291 lines, .md) -- name: vuln-scan
+- `./.kilo/agent/jasper.md` (70 lines, .md) -- description: MEP Engineering Orchestrator — coordinates coordination, calculation, drawing across all disciplines
+- `./.kilo/command/gsd-execute-phase.md` (14 lines, .md) -- description: Execute a GSD phase — auto-runs all plans in the active phase
+- `./.security-harness/.claude/skills/_lib/checkpoint.py` (211 lines, .py) -- Called via Bash from within a skill so phase state and final output land on disk
+- `./.security-harness/.claude/skills/customize/SKILL.md` (133 lines, .md) -- name: customize
+- `./.security-harness/.claude/skills/patch/SKILL.md` (619 lines, .md) -- name: patch
+- `./.security-harness/.claude/skills/quickstart/SKILL.md` (122 lines, .md) -- name: quickstart
+- `./.security-harness/.claude/skills/threat-model/README.md` (126 lines, .md) -- A Claude Code skill that builds a threat model for a target codebase. Two
+- `./.security-harness/.claude/skills/threat-model/SKILL.md` (156 lines, .md) -- name: threat-model
+- `./.security-harness/.claude/skills/threat-model/bootstrap.md` (420 lines, .md) -- > **Re-read note:** If you need this file mid-session and the Read tool
+- `./.security-harness/.claude/skills/threat-model/interview.md` (203 lines, .md) -- > **Re-read note:** If you need this file mid-session and the Read tool
+- `./.security-harness/.claude/skills/threat-model/schema.md` (189 lines, .md) -- > **Re-read note:** If you need this file mid-session and the Read tool
+- `./.security-harness/.claude/skills/triage/README.md` (95 lines, .md) -- A Claude Code skill that triages a batch of raw security-scanner findings:
+- `./.security-harness/.claude/skills/triage/SKILL.md` (1008 lines, .md) -- name: triage
+- `./.security-harness/.claude/skills/vuln-scan/SKILL.md` (291 lines, .md) -- name: vuln-scan
+- `./.security-harness/CLAUDE.md` (258 lines, .md) -- This repo has two halves:
+- `./.security-harness/README.md` (311 lines, .md) -- A reference implementation for autonomous vulnerability discovery and
+- `./.security-harness/docs/agent-sandbox.md` (118 lines, .md) -- > This document describes the sandboxing implementation details for
+- `./.security-harness/docs/blog-post.md` (202 lines, .md) -- Model capabilities are advancing quickly, and unevenly. We’ve been [working with security teams](https://www.anthropic
+- `./.security-harness/docs/customizing.md` (81 lines, .md) -- Out of the box, the reference pipeline is set up for finding memory bugs in
+- `./.security-harness/docs/patching.md` (219 lines, .md) -- The pipeline's `patch` stage takes a verified crash from a `vuln-pipeline run`
+- `./.security-harness/docs/pipeline.md` (174 lines, .md) -- The reference pipeline is an autonomous, multi-agent pipeline for finding memory
+- `./.security-harness/docs/security.md` (89 lines, .md) -- > **TL;DR:** The autonomous pipeline executes target code. Run it via
+- `./.security-harness/docs/triage.md` (82 lines, .md) -- Your pipeline (or another scanner) just produced a pile of raw findings.
+- `./.security-harness/docs/troubleshooting.md` (106 lines, .md) -- Independent agents converge on \"lowest hanging fruit.\" The pipeline mitigates
+- `./.security-harness/harness/README.md` (164 lines, .md) -- This package is the reference pipeline: an autonomous, multi-agent harness
+- `./.security-harness/harness/__init__.py` (2 lines, .py) -- <empty>
+- `./.security-harness/harness/agent.py` (364 lines, .py) -- Invokes `claude -p --output-format stream-json` via `docker exec` into the
+- `./.security-harness/harness/agent_image.py` (83 lines, .py) -- The agent runs *inside* its container, so the container needs the CLI. To
+- `./.security-harness/harness/artifacts.py` (192 lines, .py) -- CrashArtifact is the pivot: find emits it, grade consumes it.
+- `./.security-harness/harness/asan.py` (107 lines, .py) -- Shared by the runtime bug-sharing jsonl (cli.py) and post-hoc dedup (dedup.py).
+- `./.security-harness/harness/cli.py` (1402 lines, .py) --   vuln-pipeline run <target> --model <model>                   # one find + grade cycle
+- `./.security-harness/harness/config.py` (66 lines, .py) -- A target is a directory under targets/ containing:
+- `./.security-harness/harness/dedup.py` (87 lines, .py) --   vuln-pipeline dedup results/<target>/<timestamp>/    # one batch
+- `./.security-harness/harness/docker_ops.py` (153 lines, .py) -- Agent containers run under gVisor on the `vp-internal` `--internal` network;
+- `./.security-harness/harness/find.py` (109 lines, .py) -- Budget: max_turns=2000 (one run is hours, not minutes).
+- `./.security-harness/harness/grade.py` (109 lines, .py) -- The trust boundary is the image tag — find-agent could write anywhere
+- `./.security-harness/harness/judge.py` (128 lines, .py) -- No-tools agents — the decision is semantic, the inputs fit in a prompt. One
+- `./.security-harness/harness/novelty.py` (94 lines, .py) -- Opt-in (`--novelty`). When enabled, the orchestrator shallow-clones the
+- `./.security-harness/harness/patch.py` (209 lines, .py) -- Mirrors report.py shape. Two-container trust boundary: the patch agent works
+- `./.security-harness/harness/patch_grade.py` (315 lines, .py) -- Mirrors grade.py's two-container trust boundary: the patch agent (container A)
+- `./.security-harness/harness/prompts/__init__.py` (2 lines, .py) -- <empty>
+- `./.security-harness/harness/prompts/find_prompt.py` (344 lines, .py) -- and exclusion sections are the most important.
+- `./.security-harness/harness/prompts/grade_prompt.py` (84 lines, .py) -- Grader agent runs *inside* a fresh sandboxed container that the find-agent
+- `./.security-harness/harness/prompts/judge_prompt.py` (187 lines, .py) -- Judge: decides whether a freshly-graded crash is NEW (warrants a report),
+- `./.security-harness/harness/prompts/patch_prompt.py` (177 lines, .py) -- The style judge is a single no-tool call and never gates.
+- `./.security-harness/harness/prompts/recon_prompt.py` (73 lines, .py) -- of the attack surface into focus areas for parallel find-agents.
+- `./.security-harness/harness/prompts/report_grader_prompt.py` (80 lines, .py) -- sections + escalation bonus, and extracts severity/reachability/novelty tokens.
+- `./.security-harness/harness/prompts/report_prompt.py` (207 lines, .py) -- Find+grade answered \"is this a real, reproducible crash?\" This answers \"is it
+- `./.security-harness/harness/prompts/system_prompt.py` (59 lines, .py) -- The prompt is two layers:
+- `./.security-harness/harness/recon.py` (60 lines, .py) -- A lightweight agent (short turn budget, no binary execution needed) reads
+- `./.security-harness/harness/report.py` (181 lines, .py) -- Third agent phase after find+grade. Fresh container from the same image; only
+- `./.security-harness/harness/sandbox.py` (128 lines, .py) -- The pipeline spawns each find/grade/report/recon agent inside a gVisor
+- `./.security-harness/scripts/egress_proxy.py` (86 lines, .py) -- Agent containers sit on the docker --internal vp-internal network with no
+- `./.security-harness/scripts/setup_sandbox.sh` (197 lines, .sh) -- set -euo pipefail
+- `./.security-harness/targets/README.md` (86 lines, .md) -- A target is a directory under `targets/` containing everything the pipeline
+- `./.security-harness/targets/alsa/README.md` (88 lines, .md) -- ALSA topology subsystem. Parses `.tplg` binary topology files (the compiled
+- `./.security-harness/targets/canary/README.md` (46 lines, .md) -- A deliberately vulnerable target with three planted bugs, one per \"parser.\"
+- `./.security-harness/targets/canary/THREAT_MODEL.md` (65 lines, .md) -- `canary` is a single-file (~85 LOC) C command-line tool that reads one file
+- `./.security-harness/targets/canary/fixtures/README.md` (15 lines, .md) -- `results_sample/` is a pre-baked results directory in the same shape that
+- `./.security-harness/targets/drlibs/README.md` (95 lines, .md) -- Single-header C audio decoders (`dr_wav.h`, `dr_flac.h`). Two CVEs at the
+- `./.security-harness/targets/drlibs/THREAT_MODEL.md` (67 lines, .md) -- dr_libs is a set of single-header, public-domain C audio decoders. The two headers in scope at pinned commit `fb1b2dfc58
+- `./.security-harness/targets/htslib/README.md` (90 lines, .md) -- Bioinformatics file-format library — the reference implementation for SAM,
+- `./.security-harness/tests/__init__.py` (2 lines, .py) -- <empty>
+- `./.security-harness/tests/test_agent_sandbox.py` (103 lines, .py) -- Gated behind REPRO=1 so the default ``pytest tests/`` stays hermetic.
+- `./.security-harness/tests/test_artifacts.py` (87 lines, .py) -- from harness.artifacts import CrashArtifact, GraderVerdict, RunResult
+- `./.security-harness/tests/test_asan.py` (164 lines, .py) -- import json
+- `./.security-harness/tests/test_checkpoint.py` (144 lines, .py) -- import json
+- `./.security-harness/tests/test_cli_auth.py` (43 lines, .py) -- import pytest
+- `./.security-harness/tests/test_dedup.py` (228 lines, .py) -- Summary-only view now — the judge agent gates report dispatch in streaming
+- `./.security-harness/tests/test_focus.py` (103 lines, .py) -- from harness.prompts.find_prompt import build_find_prompt
+- `./.security-harness/tests/test_found_bugs.py` (273 lines, .py) -- import json
+- `./.security-harness/tests/test_judge.py` (139 lines, .py) -- import json
+- `./.security-harness/tests/test_patch.py` (176 lines, .py) -- from __future__ import annotations
+- `./.security-harness/tests/test_patch_grade.py` (350 lines, .py) -- docker_ops + find.run_find are mocked; e2e against real Docker lives in
+- `./.security-harness/tests/test_patch_grade_e2e.py` (110 lines, .py) -- Hand-crafted patches with known correct verdicts, asserting grade_patch
+- `./.security-harness/tests/test_report.py` (173 lines, .py) -- prompt building, representative picker.\"\"\"
+- `./.security-harness/tests/test_sandbox.py` (132 lines, .py) -- Unit-level only. Real-infra checks (gVisor isolation, egress, claude CLI)
+- `./.security-harness/tests/test_skill_checkpoint.py` (143 lines, .py) -- Payload always via --from <file>; stdin is rejected to prevent heredoc-
+- `./.security-harness/tests/test_system_prompt.py` (34 lines, .py) -- from harness.prompts.system_prompt import (
+- `./.security-harness/tests/test_xml_parse.py` (153 lines, .py) -- The critical case: tags appear in message N-3, a short \"Done!\"
+- `./AGENT-MANAGEMENT.md` (337 lines, .md) -- Manage multiple AI agents within Claude Code. Switch between Jasper, Claude, Codex, and custom agents.
+- `./AGENTS.md` (507 lines, .md) -- ijfw_version: 1.3.2
+- `./AI-COLLABORATION-GUIDE.md` (234 lines, .md) -- This document provides context for other LLMs (Nemotron, Claude, Perplexity, etc.) working with Frank's Agentic OS and C
+- `./CHANGELOG.md` (23 lines, .md) -- All notable changes to Agentic OS will be documented in this file. Written for humans, not machines.
+- `./CLAUDE-CODE-DEEPSEEK-SETUP.md` (173 lines, .md) -- Make Claude Code use deepseek-v4-flash as its default backend. Result: **Claude Code becomes Jasper.**
+- `./CLAUDE.md` (106 lines, .md) -- This file keeps Claude Code compatible with the shared `AGENTS.md` guidance and adds Claude-only runtime behavior. **Cla
+- `./CLAUDE_CODE_HANDOFF.md` (102 lines, .md) -- The Command Centre app now has:
+- `./CLICKUP-CLONE-PLAN.md` (107 lines, .md) -- - Ajouter colonne `priority` TEXT CHECK ('none','urgent','high','normal','low') DEFAULT 'none'
+- `./CMI-SETUP.md` (163 lines, .md) -- - Location: `P:\Ai\agentic-os-v2`
+- `./CODEX.md` (8 lines, .md) -- @AGENTS.md
+- `./COMMAND-CENTER-STATUS.md` (179 lines, .md) -- - [x] Database schema (agents, agent_configs, chat_sessions, chat_messages tables)
+- `./GOALS.md` (207 lines, .md) -- Current objectives and priorities for Frank. All tasks should align with these goals.
+- `./HANDOFF_FOR_CLAUDE_CODE.md` (72 lines, .md) -- ✅ Advanced Agent Configuration foundation implemented:
+- `./JASPER-ENTRY.md` (155 lines, .md) -- ```
+- `./JASPER-SETUP.md` (191 lines, .md) -- - ✅ `.agents/JASPER.md` — Full agent definition, capabilities, personality, integrations
+- `./JASPER-START.md` (253 lines, .md) -- - **Manages your workflow** based on GOALS.md and priorities (P0 → P1 → P2)
+- `./JASPER-STARTUP.md` (57 lines, .md) -- Jasper is now your Primary Orchestrator Agent running on deepseek-v4-flash.
+- `./JASPER.md` (59 lines, .md) -- @AGENTS.md
+- `./JASPER_REVIEW_NOTE.md` (84 lines, .md) -- All work for Weeks 1 through 6 is now complete, and planning for Weeks 7 and 8 has been prepared. As the Orchestrator ag
+- `./MIGRATION_PLAN.md` (81 lines, .md) -- | Before | After |
+- `./NOTES_FOR_CLAUDE_CODE.md` (77 lines, .md) -- - Week 5 (Advanced Agent Configuration) foundation is complete
+- `./OPENCLAW.md` (8 lines, .md) -- @AGENTS.md
+- `./P1-SYSTEMS-PLANNING.md` (360 lines, .md) -- Frank is planning 4 P1 systems to automate MEP engineering workflows and reduce his workload from 70H/week to 50H/week:
+- `./PI.md` (8 lines, .md) -- @AGENTS.md
+- `./README.md` (401 lines, .md) -- Turn Claude Code into your Agentic Operating System.
+- `./RESEARCH-EXTRACTION-SYSTEM.md` (225 lines, .md) -- Three new skills + TOON format optimization for token-efficient research and data collection.
+- `./SOUL.md` (30 lines, .md) -- When decision framework exists (coordination → calculation → drawing), operate autonomously. When entering new terri
+- `./TASKS.md` (12 lines, .md) -- <!-- Format: - [ ] Task title | priority:P0-P3 | due:YYYY-MM-DD | note:... -->
+- `./TODO_STATUS_FOR_JASPER.md` (85 lines, .md) -- | # | Task | Status | File |
+- `./USER.md` (51 lines, .md) -- - **Workload:** 70H/week (unsustainable)
+- `./WEEK5_COMPLETION_SUMMARY.md` (94 lines, .md) -- Successfully initiated Week 5 work focusing on Advanced Agent Configuration for the Command Center project. Enhanced the
+- `./WEEK5_FINAL_NOTES.md` (76 lines, .md) -- The AgentBuilder component has been significantly enhanced to support advanced agent configuration. The following featur
+- `./WEEK5_PROGRESS_NOTES.md` (91 lines, .md) -- I've successfully enhanced the AgentBuilder component to support advanced agent configuration as requested for Week 5. H
+- `./WEEK5_STATUS.md` (156 lines, .md) -- - Extended `Agent` interface in `src/components/AgentBuilder.tsx` to include:
+- `./WEEK6_READY.md` (47 lines, .md) -- I have completed all preparatory work for Week 6 MEP checklist system development:
+- `./WEEK6_START_NOTES.md` (78 lines, .md) -- Week 5 focused on Advanced Agent Configuration, enhancing the AgentBuilder component to support:
+- `./WEEK6_WORK_PLAN.md` (195 lines, .md) -- Week 6 marks the beginning of Phase 2 in the project roadmap, focusing on building the MEP (Mechanical, Electrical, Plum
+- `./WEEKS_7_8_HANDOFF.md` (102 lines, .md) -- - Database schema with `agents`, `agent_configs`, `chat_sessions`, `chat_messages` tables
+- `./agentic-os-v2/.claude/commands/archive-gsd.md` (58 lines, .md) -- Mark a GSD project as complete. Each Level 3 project owns its own `.planning/`
+- `./agentic-os-v2/.claude/commands/start-here.md` (298 lines, .md) -- The onboarding entry point for first-time users.
+- `./agentic-os-v2/.claude/hooks/branch-guard.js` (162 lines, .js) -- const { execSync } = require('child_process');
+- `./agentic-os-v2/.claude/hooks/gsd-check-update.js` (114 lines, .js) -- const fs = require('fs');
+- `./agentic-os-v2/.claude/hooks/gsd-context-monitor.js` (194 lines, .js) -- const fs = require('fs');
+- `./agentic-os-v2/.claude/hooks/gsd-prompt-guard.js` (96 lines, .js) -- const fs = require('fs');
+- `./agentic-os-v2/.claude/hooks/gsd-statusline.js` (119 lines, .js) -- const fs = require('fs');
+- `./agentic-os-v2/.claude/hooks/gsd-workflow-guard.js` (122 lines, .js) -- const fs = require('fs');
+- `./agentic-os-v2/.claude/hooks/run-ccnotify.js` (96 lines, .js) -- const { spawn, spawnSync } = require(\"child_process\");
+- `./agentic-os-v2/.claude/hooks/session-sync-notify.js` (96 lines, .js) -- const fs = require(\"fs\");
+- `./agentic-os-v2/.claude/hooks/session-sync-prompt.js` (108 lines, .js) -- const fs = require(\"fs\");
+- `./agentic-os-v2/.claude/hooks/session-sync-stop.js` (144 lines, .js) -- const fs = require(\"fs\");
+- `./agentic-os-v2/.claude/hooks/session-sync-tool.js` (127 lines, .js) -- const fs = require(\"fs\");
+- `./agentic-os-v2/.claude/hooks/session-sync.js` (134 lines, .js) -- const fs = require(\"fs\");
+- `./agentic-os-v2/.claude/hooks/skill-auto-commit-worker.js` (21 lines, .js) -- const { spawnSync } = require(\"child_process\");
+- `./agentic-os-v2/.claude/hooks/skill-auto-commit.js` (57 lines, .js) -- const path = require(\"path\");
+- `./agentic-os-v2/.claude/hooks_info/ccnotify.py` (916 lines, .py) -- Claude Code Notify
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/SKILL.md` (620 lines, .md) -- name: meta-skill-creator
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/agents/analyzer.md` (274 lines, .md) -- Analyze blind comparison results to understand WHY the winner won and generate improvement suggestions.
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/agents/comparator.md` (202 lines, .md) -- Compare two outputs WITHOUT knowing which skill produced them.
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/agents/grader.md` (223 lines, .md) -- Evaluate expectations against an execution transcript and outputs.
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/eval-viewer/generate_review.py` (471 lines, .py) -- Reads the workspace directory, discovers runs (directories with outputs/),
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/references/schemas.md` (430 lines, .md) -- This document defines the JSON schemas used by skill-creator.
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/__init__.py` (0 lines, .py) -- <empty>
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/aggregate_benchmark.py` (401 lines, .py) -- Aggregate individual run results into benchmark summary statistics.
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/generate_report.py` (326 lines, .py) -- Takes the JSON output from run_loop.py and generates a visual HTML report
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/improve_description.py` (247 lines, .py) -- Takes eval results (from run_eval.py) and generates an improved description
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/package_skill.py` (136 lines, .py) -- Skill Packager - Creates a distributable .skill file of a skill folder
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/quick_validate.py` (102 lines, .py) -- Quick validation script for skills - minimal version
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/run_eval.py` (310 lines, .py) -- Tests whether a skill's description causes Claude to trigger (read the skill)
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/run_loop.py` (328 lines, .py) -- Combines run_eval.py and improve_description.py in a loop, tracking history
+- `./agentic-os-v2/.claude/skills/meta-skill-creator/scripts/utils.py` (47 lines, .py) -- from pathlib import Path
+- `./agentic-os-v2/.claude/skills/meta-synthesize-locals/SKILL.md` (56 lines, .md) -- name: meta-synthesize-locals
+- `./agentic-os-v2/.claude/skills/meta-wrap-up/SKILL.md` (243 lines, .md) -- name: meta-wrap-up
+- `./agentic-os-v2/.claude/skills/mkt-brand-voice/SKILL.md` (239 lines, .md) -- name: mkt-brand-voice
+- `./agentic-os-v2/.claude/skills/mkt-brand-voice/references/build-questions.md` (205 lines, .md) -- Read this when running Mode 2 (Build). Ask a maximum of 8 questions.
+- `./agentic-os-v2/.claude/skills/mkt-brand-voice/references/extraction-guide.md` (139 lines, .md) -- Read this when running Mode 1 (Extract) or Mode 3 (Auto-Scrape).
+- `./agentic-os-v2/.claude/skills/mkt-brand-voice/references/playbook-questions.md` (252 lines, .md) -- Read this when running **Mode 3: Build → Playbook** (the deep opt-in variant).
+- `./agentic-os-v2/.claude/skills/mkt-brand-voice/references/voice-profile-template.md` (165 lines, .md) -- This is the canonical format for `brand_context/voice-profile.md`.
+- `./agentic-os-v2/.claude/skills/mkt-content-repurposing/SKILL.md` (158 lines, .md) -- name: mkt-content-repurposing
+- `./agentic-os-v2/.claude/skills/mkt-content-repurposing/references/platform-emerging.md` (215 lines, .md) -- Newer or community-driven platforms where the rules are different. Lower competition, higher trust, different expectatio
+- `./agentic-os-v2/.claude/skills/mkt-content-repurposing/references/platform-text.md` (155 lines, .md) -- What actually works on each platform right now. Format specs, what the algorithm rewards, post structures that perform, 
+- `./agentic-os-v2/.claude/skills/mkt-content-repurposing/references/platform-visual-video.md` (190 lines, .md) -- What drives results on visual and video-first platforms. Specs, what the algorithm actually rewards, structures that wor
+- `./agentic-os-v2/.claude/skills/mkt-content-repurposing/references/voice-adaptation.md` (106 lines, .md) -- Your brand voice doesn't change per platform — the delivery does. Same person, different room. You wouldn't talk to a 
+- `./agentic-os-v2/.claude/skills/mkt-copywriting/SKILL.md` (162 lines, .md) -- name: mkt-copywriting
+- `./agentic-os-v2/.claude/skills/mkt-copywriting/references/classic-frameworks.md` (112 lines, .md) -- Reference material from the books that defined modern copywriting. These principles are decades old and still outperform
+- `./agentic-os-v2/.claude/skills/mkt-copywriting/references/examples/good-post-1.md` (31 lines, .md) -- The best automation I ever built took 12 minutes.
+- `./agentic-os-v2/.claude/skills/mkt-copywriting/references/examples/good-post-2.md` (25 lines, .md) -- Stop collecting AI tools. You don't need 14 of them.
+- `./agentic-os-v2/.claude/skills/mkt-copywriting/references/persuasion-toolkit.md` (176 lines, .md) -- Practical writing techniques for persuasive copy. Load when generating any format.
+- `./agentic-os-v2/.claude/skills/mkt-copywriting/references/variants-and-scoring.md` (167 lines, .md) -- Never ship the first version. Generate options, measure quality, then recommend tests.
+- `./agentic-os-v2/.claude/skills/mkt-icp/SKILL.md` (147 lines, .md) -- name: mkt-icp
+- `./agentic-os-v2/.claude/skills/mkt-icp/references/icp-template.md` (100 lines, .md) -- Exact format for `brand_context/icp.md`. All sections required.
+- `./agentic-os-v2/.claude/skills/mkt-icp/references/interview-questions.md` (60 lines, .md) -- Ask a maximum of 8 from this bank. Prioritise based on what's already known from context. The goal is to surface the cus
+- `./agentic-os-v2/.claude/skills/mkt-icp/references/research-methods.md` (116 lines, .md) -- How to extract customer profile data from public sources. The goal is real customer language and patterns — not assump
+- `./agentic-os-v2/.claude/skills/mkt-positioning/SKILL.md` (151 lines, .md) -- name: mkt-positioning
+- `./agentic-os-v2/.claude/skills/mkt-positioning/references/angle-frameworks.md` (120 lines, .md) -- Eight frameworks for generating positioning angles. Run the product through several and keep the 3-5 strongest options.
+- `./agentic-os-v2/.claude/skills/mkt-positioning/references/competitive-search.md` (86 lines, .md) -- How to research competitor messaging before generating angles. This grounds positioning in market reality rather than as
+- `./agentic-os-v2/.claude/skills/mkt-positioning/references/market-sophistication.md` (93 lines, .md) -- Based on Eugene Schwartz's awareness levels. The market stage determines which angle type will cut through. Using the wr
+- `./agentic-os-v2/.claude/skills/mkt-positioning/references/positioning-output.md` (91 lines, .md) -- Exact format for `brand_context/positioning.md`. All sections required.
+- `./agentic-os-v2/.claude/skills/mkt-ugc-scripts/SKILL.md` (227 lines, .md) -- name: mkt-ugc-scripts
+- `./agentic-os-v2/.claude/skills/mkt-ugc-scripts/assets/reference-script-openclaw-loop.md` (18 lines, .md) -- This is the quality benchmark. Scripts should match this tone, structure, and energy.
+- `./agentic-os-v2/.claude/skills/mkt-ugc-scripts/references/hook-library.md` (154 lines, .md) -- Hooks for talking-head delivery. These are designed to be spoken to camera — they work because of how they sound, not 
+- `./agentic-os-v2/.claude/skills/mkt-ugc-scripts/references/research-to-script.md` (124 lines, .md) -- How to use `str-trending-research` output (or any research brief) to pick script topics that match the user's business a
+- `./agentic-os-v2/.claude/skills/mkt-ugc-scripts/references/script-frameworks.md` (234 lines, .md) -- Proven structures for short-form talking-head video. Each framework includes the structure, timing breakdown, when to us
+- `./agentic-os-v2/.claude/skills/ops-cron/SKILL.md` (171 lines, .md) -- name: ops-cron
+- `./agentic-os-v2/.claude/skills/ops-cron/references/job-format.md` (157 lines, .md) -- Every scheduled job is a markdown file in `cron/jobs/` with YAML frontmatter and a freeform prompt body.
+- `./agentic-os-v2/.claude/skills/str-ai-seo/SKILL.md` (169 lines, .md) -- name: str-ai-seo
+- `./agentic-os-v2/.claude/skills/str-ai-seo/references/ai-visibility-audit.md` (69 lines, .md) -- Full methodology for assessing your current AI search presence before optimizing.
+- `./agentic-os-v2/.claude/skills/str-ai-seo/references/authority-signals.md` (91 lines, .md) -- How to make content citable by AI systems. Based on the Princeton GEO study (KDD 2024) and cross-platform citation analy
+- `./agentic-os-v2/.claude/skills/str-ai-seo/references/content-patterns.md` (285 lines, .md) -- Reusable content block patterns optimized for answer engines and AI citation.
+- `./agentic-os-v2/.claude/skills/str-ai-seo/references/content-type-optimization.md` (79 lines, .md) -- How to optimize different content types for AI citation. Each section covers the goal, what to optimize, and the content
+- `./agentic-os-v2/.claude/skills/str-ai-seo/references/monitoring-tools.md` (47 lines, .md) -- Tools and methods for tracking your presence in AI-generated answers.
+- `./agentic-os-v2/.claude/skills/str-ai-seo/references/platform-ranking-factors.md` (152 lines, .md) -- Each AI search platform has its own search index, ranking logic, and content preferences. This guide covers what matters
+- `./agentic-os-v2/.claude/skills/str-trending-research/SKILL.md` (200 lines, .md) -- name: str-trending-research
+- `./agentic-os-v2/.claude/skills/str-trending-research/references/brief-template.md` (77 lines, .md) -- > Format for saved research briefs in `projects/str-trending-research/`.
+- `./agentic-os-v2/.claude/skills/str-trending-research/references/research-methodology.md` (124 lines, .md) -- > Adapted from [last30days by Ronnie-Nutrition](https://github.com/Ronnie-Nutrition/last30days-skill).
+- `./agentic-os-v2/.claude/skills/str-trending-research/references/synthesis-guide.md` (122 lines, .md) -- > Adapted from [last30days by Ronnie-Nutrition](https://github.com/Ronnie-Nutrition/last30days-skill).
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/last30days.py` (287 lines, .py) -- last30days - Research a topic from the last 30 days on Reddit + X.
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/__init__.py` (3 lines, .py) -- <empty>
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/cache.py` (129 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/dates.py` (101 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/dedupe.py` (74 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/env.py` (147 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/http.py` (130 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/models.py` (108 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/normalize.py` (98 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/openai_reddit.py` (226 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/reddit_enrich.py` (147 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/render.py` (215 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/schema.py` (303 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/score.py` (145 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/ui.py` (225 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/websearch.py` (226 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/str-trending-research/scripts/lib/xai_x.py` (178 lines, .py) -- Adapted from https://github.com/Ronnie-Nutrition/last30days-skill
+- `./agentic-os-v2/.claude/skills/tool-firecrawl-scraper/SKILL.md` (101 lines, .md) -- name: tool-firecrawl-scraper
+- `./agentic-os-v2/.claude/skills/tool-firecrawl-scraper/references/api-guide.md` (360 lines, .md) -- ```python
+- `./agentic-os-v2/.claude/skills/tool-firecrawl-scraper/references/known-issues.md` (165 lines, .md) -- 10 documented issues with prevention strategies. Read before any Firecrawl integration.
+- `./agentic-os-v2/.claude/skills/tool-humanizer/SKILL.md` (166 lines, .md) -- name: tool-humanizer
+- `./agentic-os-v2/.claude/skills/tool-humanizer/references/pattern-library.md` (154 lines, .md) -- 50+ detectable AI writing patterns organized by category. Each pattern includes detection criteria and severity (high = 
+- `./agentic-os-v2/.claude/skills/tool-humanizer/references/replacement-guide.md` (131 lines, .md) -- How to replace AI patterns with human writing. Two modes: generic (no brand context) and voice-matched (with brand_conte
+- `./agentic-os-v2/.claude/skills/tool-stitch/SKILL.md` (122 lines, .md) -- name: tool-stitch
+- `./agentic-os-v2/.claude/skills/tool-youtube/SKILL.md` (158 lines, .md) -- name: tool-youtube
+- `./agentic-os-v2/.claude/skills/tool-youtube/scripts/digest.py` (355 lines, .py) -- YouTube Digest: fetch latest videos from channels, extract transcripts, produce a digest.
+- `./agentic-os-v2/.claude/skills/tool-youtube/scripts/setup.sh` (55 lines, .sh) -- set -e
+- `./agentic-os-v2/.claude/skills/tool-youtube/scripts/transcript.py` (196 lines, .py) -- Download YouTube transcripts using yt-dlp. Outputs markdown (default) or VTT.
+- `./agentic-os-v2/.claude/skills/viz-excalidraw-diagram/SKILL.md` (163 lines, .md) -- name: viz-excalidraw-diagram
+- `./agentic-os-v2/.claude/skills/viz-excalidraw-diagram/references/color-palette.md` (94 lines, .md) -- Style: Warm PaperBanana editorial — hand-drawn feel, warm cream background, playful but professional.
+- `./agentic-os-v2/.claude/skills/viz-excalidraw-diagram/references/element-templates.md` (182 lines, .md) -- Copy-paste JSON templates for each Excalidraw element type. The `strokeColor` and `backgroundColor` values are placehold
+- `./agentic-os-v2/.claude/skills/viz-excalidraw-diagram/references/evidence-and-depth.md` (84 lines, .md) -- How to build comprehensive, educational diagrams that teach — not just label.
+- `./agentic-os-v2/.claude/skills/viz-excalidraw-diagram/references/json-schema.md` (71 lines, .md) -- | Type | Use For |
+- `./agentic-os-v2/.claude/skills/viz-excalidraw-diagram/references/render_excalidraw.py` (176 lines, .py) -- Usage:
+- `./agentic-os-v2/.claude/skills/viz-excalidraw-diagram/references/visual-patterns.md` (129 lines, .md) -- How to choose shapes, structure diagrams, and make the layout do the thinking.
+- `./agentic-os-v2/.claude/skills/viz-interface-design/SKILL.md` (172 lines, .md) -- name: viz-interface-design
+- `./agentic-os-v2/.claude/skills/viz-interface-design/references/critique.md` (66 lines, .md) -- Use this framework when reviewing a built interface — either your own work (Step 5 of the methodology) or when asked t
+- `./agentic-os-v2/.claude/skills/viz-interface-design/references/example.md` (167 lines, .md) -- This reference demonstrates the subtle layering principle with specific implementation decisions. Use these patterns as 
+- `./agentic-os-v2/.claude/skills/viz-interface-design/references/principles.md` (366 lines, .md) -- The complete design system for building interfaces that feel crafted, not assembled. Read this before writing any compon
+- `./agentic-os-v2/.claude/skills/viz-interface-design/references/validation.md` (102 lines, .md) -- How to manage `.interface-design/system.md` — the file that carries design decisions across sessions.
+- `./agentic-os-v2/.claude/skills/viz-nano-banana/SKILL.md` (129 lines, .md) -- name: viz-nano-banana
+- `./agentic-os-v2/.claude/skills/viz-nano-banana/references/element-library.md` (71 lines, .md) -- SVG snippets for decorative elements, badges, figures, and connectors. Use these when building SVG blueprints (Mode B) o
+- `./agentic-os-v2/.claude/skills/viz-nano-banana/references/layout-patterns.md` (108 lines, .md) -- Choose a layout based on how the concept behaves, not what it is. The layout should make the argument visible before any
+- `./agentic-os-v2/.claude/skills/viz-nano-banana/references/styles.md` (139 lines, .md) -- Each style below is a complete prompt template. When generating, combine the style prefix with the user's specific conte
+- `./agentic-os-v2/.claude/skills/viz-nano-banana/references/svg-construction.md` (109 lines, .md) -- For Mode B (SVG Blueprint) — when you need precise layout control before describing the composition to Gemini. The SVG
+- `./agentic-os-v2/.claude/skills/viz-nano-banana/scripts/generate_image.py` (235 lines, .py) -- Generate images using Google's Nano Banana Pro (Gemini 3 Pro Image) API.
+- `./agentic-os-v2/.claude/skills/viz-nano-banana/scripts/test_generate_image.py` (36 lines, .py) -- import importlib.util
+- `./agentic-os-v2/.claude/skills/viz-stitch-design/SKILL.md` (153 lines, .md) -- name: viz-stitch-design
+- `./agentic-os-v2/.claude/skills/viz-ugc-heygen/SKILL.md` (173 lines, .md) -- name: viz-ugc-heygen
+- `./agentic-os-v2/.claude/skills/viz-ugc-heygen/references/api-reference.md` (197 lines, .md) -- All requests use `X-Api-Key` header with `HEYGEN_API_KEY` env var.
+- `./agentic-os-v2/.claude/skills/viz-ugc-heygen/references/avatar-config.md` (102 lines, .md) -- | Name | Voice ID | Source |
+- `./agentic-os-v2/.claude/skills/viz-ugc-heygen/references/platform-formats.md` (75 lines, .md) -- | Platform | Aspect | Resolution | Orientation |
+- `./agentic-os-v2/.claude/skills/viz-ugc-heygen/references/prompt-optimizer.md` (108 lines, .md) -- For use with `generate_video_agent` — the one-shot prompt-to-video endpoint.
+- `./agentic-os-v2/.claude/skills/viz-ugc-heygen/references/scripting-guide.md` (100 lines, .md) -- - **150 words/minute** at 1.0x speed
+- `./agentic-os-v2/.claude/skills/viz-ugc-heygen/scripts/burn-captions.py` (222 lines, .py) -- Burn branded .ass captions onto a video using ffmpeg's native libass renderer.
+- `./agentic-os-v2/.claude/skills/viz-ugc-heygen/scripts/setup.sh` (39 lines, .sh) -- set -e
+- `./agentic-os-v2/AGENTS.md` (464 lines, .md) -- Shared project instructions for Agentic OS.
+- `./agentic-os-v2/CHANGELOG.md` (23 lines, .md) -- All notable changes to Agentic OS will be documented in this file. Written for humans, not machines.
+- `./agentic-os-v2/CLAUDE.md` (100 lines, .md) -- This file keeps Claude Code compatible with the shared `AGENTS.md` guidance and adds Claude-only runtime behavior.
+- `./agentic-os-v2/CMI-SETUP.md` (163 lines, .md) -- - Location: `P:\Ai\agentic-os-v2`
+- `./agentic-os-v2/README.md` (401 lines, .md) -- Turn Claude Code into your Agentic Operating System.
+- `./agentic-os-v2/SOUL.md` (30 lines, .md) -- When decision framework exists (coordination → calculation → drawing), operate autonomously. When entering new terri
+- `./agentic-os-v2/USER.md` (51 lines, .md) -- - **Workload:** 70H/week (unsustainable)
+- `./agentic-os-v2/brand_context/VOICE.md` (55 lines, .md) -- - **Technical, not flowery** — Direct, specific, no jargon without explanation
+- `./agentic-os-v2/command-centre/README.md` (41 lines, .md) -- Command Centre launches from `command-centre`, and its explicit Next.js root stays scoped to that directory so Turbopack
+- `./agentic-os-v2/command-centre/next.config.ts` (24 lines, .ts) -- import { dirname } from \"node:path\";
+- `./agentic-os-v2/command-centre/src/app/api/brand/route.ts` (45 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/briefs/sync/route.ts` (145 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/chat/attachments/route.ts` (67 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/chat/conversations/[id]/messages/route.ts` (28 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/chat/conversations/[id]/route.ts` (54 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/chat/conversations/route.ts` (81 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/chat/message/route.ts` (316 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/clients/route.ts` (15 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/context/brand/route.ts` (41 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/context/route.ts` (87 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/cron/[name]/history/route.ts` (20 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/cron/[name]/logs/route.ts` (20 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/cron/[name]/route.ts` (87 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/cron/[name]/run/route.ts` (53 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/cron/[name]/source/route.ts` (25 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/cron/[name]/toggle/route.ts` (26 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/cron/route.ts` (68 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/cron/system-status/route.ts` (17 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/dashboard/summary/route.ts` (357 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/events/route.ts` (78 lines, .ts) -- import { onTaskEvent, offTaskEvent, onChatEvent, offChatEvent } from \"@/lib/event-bus\";
+- `./agentic-os-v2/command-centre/src/app/api/files/[...path]/route.ts` (144 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/files/download/route.ts` (41 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/files/preview/route.ts` (148 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/files/recent/route.ts` (36 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/files/reveal/route.ts` (40 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/files/route.ts` (44 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/files/upload/route.ts` (73 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/goal-drafts/attachments/route.ts` (56 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/gsd/archive/route.ts` (45 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/gsd/complete/route.ts` (35 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/gsd/ensure-task/route.ts` (315 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/gsd/files/route.ts` (135 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/gsd/phase-status/route.ts` (154 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/gsd/route.ts` (87 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/gsd/status/route.ts` (45 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/projects/[slug]/brief/route.ts` (36 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/projects/[slug]/tasks-from-brief/route.ts` (242 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/projects/[slug]/tasks-from-scope/route.ts` (267 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/projects/route.ts` (320 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/prompt-tags/route.ts` (9 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/settings/claude-settings/route.ts` (84 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/settings/env/route.ts` (70 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/settings/mcp/route.ts` (78 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/settings/scripts/route.ts` (6 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/settings/scripts/run/route.ts` (141 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/skills/route.ts` (61 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/approval-requests/[requestId]/route.ts` (69 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/approval-requests/route.ts` (23 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/cancel/route.ts` (44 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/execute/route.ts` (58 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/logs/route.ts` (218 lines, .ts) -- import fs from \"fs\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/outputs/route.ts` (160 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/reply/route.ts` (320 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/route.ts` (479 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/status/route.ts` (140 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/[id]/sync-phases/route.ts` (203 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/cluster-goals/route.ts` (129 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/generate-title/route.ts` (83 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/history/route.ts` (118 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/plan-subtasks/route.ts` (251 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/retitle-all/route.ts` (209 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/route.ts` (229 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/scope-goal/route.ts` (456 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/sync-projects/route.ts` (263 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/sync-session/route.ts` (167 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/tasks/tags/route.ts` (11 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/api/terminal/exec/route.ts` (105 lines, .ts) -- import { NextRequest } from \"next/server\";
+- `./agentic-os-v2/command-centre/src/app/autonomous/page.tsx` (5 lines, .tsx) -- import { redirect } from \"next/navigation\";
+- `./agentic-os-v2/command-centre/src/app/board/page.tsx` (10 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/brand/page.tsx` (12 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/context/page.tsx` (12 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/cron/page.tsx` (12 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/docs/page.tsx` (33 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/global-error.tsx` (23 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/gsd/page.tsx` (584 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/history/page.tsx` (1172 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/layout.tsx` (48 lines, .tsx) -- import type { Metadata } from \"next\";
+- `./agentic-os-v2/command-centre/src/app/page.tsx` (377 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/settings/page.tsx` (41 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/skills/page.tsx` (99 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/app/tasks/page.tsx` (8 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/autonomous/agent-decision-card.tsx` (71 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/autonomous/bubbled-question.tsx` (737 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/autonomous/chat-input.tsx` (280 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/autonomous/chat-panel.tsx` (253 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/autonomous/chat-view.tsx` (255 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/autonomous/status-sidebar.tsx` (227 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/brand-context-banner.tsx` (91 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/client-filter-bar.tsx` (242 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/feed-card.tsx` (466 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/feed-view.tsx` (4961 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/file-preview-modal.tsx` (474 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/goal-chips.tsx` (94 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/goal-draft-card.tsx` (192 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/kanban-board.tsx` (669 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/kanban-column-active.tsx` (31 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/kanban-column-done.tsx` (328 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/level-badge.tsx` (50 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/new-goal-panel.tsx` (1323 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/output-chips.tsx` (79 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/review-banner.tsx` (114 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/review-queue.tsx` (759 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/routing-decision-card.tsx` (319 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/subtask-status-strip.tsx` (63 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/board/task-create-input.tsx` (1192 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/brand/brand-card-grid.tsx` (189 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/brand/brand-detail-panel.tsx` (368 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/context/content-viewer.tsx` (579 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/context/context-file-list.tsx` (461 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/context/file-tree.tsx` (192 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/cron/create-job-panel.tsx` (313 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/cron/cron-row.tsx` (607 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/cron/cron-table.tsx` (266 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/cron/run-history.tsx` (428 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/cron/runtime-status.tsx` (119 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/cron/schedule-selector.tsx` (196 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/dashboard/active-projects.tsx` (204 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/dashboard/activity-pulse.tsx` (218 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/dashboard/awaiting-review.tsx` (159 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/dashboard/client-breakdown.tsx` (197 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/dashboard/greeting-header.tsx` (59 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/dashboard/open-threads.tsx` (2 lines, .tsx) -- export {};
+- `./agentic-os-v2/command-centre/src/components/dashboard/recent-completions.tsx` (137 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/dashboard/system-health.tsx` (111 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/dashboard/token-usage.tsx` (2 lines, .tsx) -- export {};
+- `./agentic-os-v2/command-centre/src/components/docs/docs-file-tree.tsx` (847 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/gsd/phase-detail.tsx` (454 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/gsd/phase-pipeline.tsx` (147 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/layout/app-shell.tsx` (60 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/layout/client-switcher.tsx` (359 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/layout/scope-bar.tsx` (126 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/layout/sidebar.tsx` (198 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/layout/stats-bar.tsx` (234 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/chat-entry.tsx` (1426 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/chat-list.tsx` (614 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/chat-pane.tsx` (302 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/gsd-guardrail-modal.tsx` (692 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/modal-chat.tsx` (1732 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/modal-file-preview.tsx` (434 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/modal-header.tsx` (417 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/modal-new-task-form.tsx` (346 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/modal-sidebar.tsx` (91 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/modal-summary-tab.tsx` (1078 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/next-action-chips.tsx` (344 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/pane-container.tsx` (553 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/phase-progress-strip.tsx` (372 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/project-dashboard.tsx` (986 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/reply-input.tsx` (730 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/scoping-wizard-panel.tsx` (1824 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/subtasks-strip.tsx` (2 lines, .tsx) -- export {};
+- `./agentic-os-v2/command-centre/src/components/modal/task-modal.tsx` (991 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/task-progress.tsx` (85 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/modal/terminal-pane.tsx` (267 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/panel/panel-header.tsx` (163 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/panel/panel-outputs.tsx` (441 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/panel/panel-stats.tsx` (169 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/panel/task-detail-panel.tsx` (7 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/settings/env-editor.tsx` (202 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/settings/env-row.tsx` (185 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/settings/json-editor.tsx` (396 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/settings/script-confirm-modal.tsx` (123 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/settings/script-list.tsx` (388 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/settings/script-runner.tsx` (243 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/settings/settings-tabs.tsx` (75 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/attachment-asset-grid.tsx` (1120 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/chat-attachment-strip.tsx` (104 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/composer-asset-tray.tsx` (41 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/composer-draft-asset-collection.tsx` (58 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/draft-plan-preview.tsx` (246 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/file-upload.tsx` (278 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/markdown-editor.tsx` (89 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/markdown-preview.tsx` (234 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/model-picker.tsx` (141 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/pasted-text-card.tsx` (324 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/permission-picker.tsx` (156 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/question-modal.tsx` (948 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/resizable-pane.tsx` (153 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/scoped-file-tree.tsx` (207 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/slash-command-menu.tsx` (546 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/slide-out-panel.tsx` (130 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/tag-picker.tsx` (440 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/task-approval-actions.tsx` (433 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/shared/tasks-popover.tsx` (408 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/skills/skill-card.tsx` (166 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/skills/skill-upload-modal.tsx` (695 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/skills/skills-file-tree.tsx` (262 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/skills/skills-grid.tsx` (198 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/skills/skills-summary.tsx` (420 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/sse-provider.tsx` (8 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/components/tasks/tasks-view.tsx` (1184 lines, .tsx) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/hooks/use-chat-composer.ts` (439 lines, .ts) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/hooks/use-client-id.ts` (18 lines, .ts) -- import { useClientStore } from \"@/store/client-store\";
+- `./agentic-os-v2/command-centre/src/hooks/use-composer-resize.ts` (80 lines, .ts) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/hooks/use-gsd-sync.ts` (18 lines, .ts) -- import { useEffect, useRef } from \"react\";
+- `./agentic-os-v2/command-centre/src/hooks/use-pane-state.ts` (343 lines, .ts) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/hooks/use-projects.ts` (39 lines, .ts) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/hooks/use-sse.ts` (91 lines, .ts) -- \"use client\";
+- `./agentic-os-v2/command-centre/src/instrumentation.ts` (34 lines, .ts) -- export async function register() {
+- `./agentic-os-v2/command-centre/src/lib/api-error.ts` (15 lines, .ts) -- export async function readApiError(
+- `./agentic-os-v2/command-centre/src/lib/approval-request-format.ts` (122 lines, .ts) -- function getPathLike(input: unknown): string | null {
+- `./agentic-os-v2/command-centre/src/lib/approval-requests.ts` (113 lines, .ts) -- import crypto from \"crypto\";
+- `./agentic-os-v2/command-centre/src/lib/brief-sync.ts` (150 lines, .ts) -- function stripCheckbox(text: string): string {
+- `./agentic-os-v2/command-centre/src/lib/chat-attachment-policy.ts` (57 lines, .ts) -- const CHAT_ATTACHMENT_EXTENSIONS = [
+- `./agentic-os-v2/command-centre/src/lib/chat-attachment-service.ts` (363 lines, .ts) -- import fs from \"fs\";
+- `./agentic-os-v2/command-centre/src/lib/chat-drafts.ts` (145 lines, .ts) -- import type { ChatComposerSurface, ChatDraftPayload } from \"@/types/chat-composer\";
+- `./agentic-os-v2/command-centre/src/lib/chat-message-content.ts` (38 lines, .ts) -- import type { ChatAttachment, ChatPastedBlock } from \"@/types/chat-composer\";
+- `./agentic-os-v2/command-centre/src/lib/chat-session-memory.ts` (46 lines, .ts) -- const STORAGE_PREFIX = \"cc.chat-session:v1:\";
+- `./agentic-os-v2/command-centre/src/lib/claude-parser.ts` (506 lines, .ts) -- import type { LogEntry, Todo } from \"@/types/task\";
+- `./agentic-os-v2/command-centre/src/lib/clients.ts` (99 lines, .ts) -- import { createHash } from \"crypto\";
+- `./agentic-os-v2/command-centre/src/lib/composer.ts` (81 lines, .ts) -- import type { KeyboardEvent as ReactKeyboardEvent } from \"react\";
+- `./agentic-os-v2/command-centre/src/lib/config.ts` (200 lines, .ts) -- import path from \"path\";
+- `./agentic-os-v2/command-centre/src/lib/cron-runtime.js` (2845 lines, .js) -- const fs = require(\"fs\");
+- `./agentic-os-v2/command-centre/src/lib/cron-scheduler.ts` (192 lines, .ts) -- import { getConfig } from \"./config\";
+- `./agentic-os-v2/command-centre/src/lib/cron-service.ts` (146 lines, .ts) -- import { getConfig } from \"./config\";
+- `./agentic-os-v2/command-centre/src/lib/cron-system-status.ts` (35 lines, .ts) -- import { getConfig } from \"./config\";
+- `./agentic-os-v2/command-centre/src/lib/cron-task-sync.ts` (100 lines, .ts) -- import { getDb } from \"./db\";
+- `./agentic-os-v2/command-centre/src/lib/db.ts` (337 lines, .ts) -- import Database from \"better-sqlite3\";
+- `./agentic-os-v2/command-centre/src/lib/env-parser.ts` (26 lines, .ts) -- export interface EnvEntry {
+- `./agentic-os-v2/command-centre/src/lib/event-bus.ts` (76 lines, .ts) -- import { EventEmitter } from \"events\";
+- `./agentic-os-v2/command-centre/src/lib/file-diff.ts` (112 lines, .ts) -- import fs from \"fs\";
+- `./agentic-os-v2/command-centre/src/lib/file-icons.ts` (132 lines, .ts) -- import {
+- `./agentic-os-v2/command-centre/src/lib/file-node-response.ts` (12 lines, .ts) -- import type { FileNode } from \"@/types/file\";
+- `./agentic-os-v2/command-centre/src/lib/file-service.ts` (246 lines, .ts) -- import fs from \"fs\";
+- `./agentic-os-v2/command-centre/src/lib/file-watcher.ts` (171 lines, .ts) -- import { watch, type FSWatcher } from \"chokidar\";
+- `./agentic-os-v2/command-centre/src/lib/gather-context.ts` (262 lines, .ts) -- import fs from \"fs\";
+- `./agentic-os-v2/command-centre/src/lib/goal-draft-attachment-service.ts` (142 lines, .ts) -- import fs from \"fs\";
+- `./agentic-os-v2/command-centre/src/lib/goal-draft-panel-state.ts` (59 lines, .ts) -- export interface GoalDraftPanelState {
+- `./agentic-os-v2/command-centre/src/lib/goal-drafts.ts` (125 lines, .ts) -- import type { GoalDraftPayload } from \"@/types/goal-draft\";
+- `./agentic-os-v2/command-centre/src/lib/gsd-parser.ts` (129 lines, .ts) -- import fs from \"fs\";
+- `./agentic-os-v2/command-centre/src/lib/level-signals.ts` (60 lines, .ts) -- import type { TaskLevel } from \"@/types/task\";
+- `./agentic-os-v2/command-centre/src/lib/levels.ts` (32 lines, .ts) -- import type { TaskLevel } from \"@/types/task\";
+- `./agentic-os-v2/command-centre/src/lib/pasted-text.ts` (94 lines, .ts) -- export const PASTED_TEXT_LINE_THRESHOLD = 8;
+- `./agentic-os-v2/command-centre/src/lib/permission-mode.ts` (103 lines, .ts) -- import type { PermissionMode, TaskStatus } from \"@/types/task\";
+- `./agentic-os-v2/command-centre/src/lib/plan-brief.server.ts` (33 lines, .ts) -- import \"server-only\";
+- `./agentic-os-v2/command-centre/src/lib/plan-brief.ts` (232 lines, .ts) -- import {
+- `./agentic-os-v2/command-centre/src/lib/process-manager.ts` (2146 lines, .ts) -- import type { ChildProcess } from \"child_process\";
+- `./agentic-os-v2/command-centre/src/lib/prompt-tags.ts` (190 lines, .ts) -- import fs from \"fs\";
+- `./agentic-os-v2/command-centre/src/lib/queue-watcher.ts` (411 lines, .ts) -- import { onTaskEvent, emitTaskEvent, type TaskEvent } from \"./event-bus\";
+- `./agentic-os-v2/command-centre/src/lib/run-claude-text-prompt.ts` (65 lines, .ts) -- import { killChildProcessTree, spawnUiProcess } from \"@/lib/subprocess\";
+- `./agentic-os-v2/command-centre/src/lib/script-registry.ts` (43 lines, .ts) -- export interface ArgDefinition {
+- `./agentic-os-v2/command-centre/src/lib/script-runner-session.ts` (36 lines, .ts) -- export interface ScriptRunnerSession {
+- `./agentic-os-v2/command-centre/src/lib/slash-commands.ts` (79 lines, .ts) -- export interface SlashCommand {
+- `./agentic-os-v2/command-centre/src/lib/subprocess.ts` (80 lines, .ts) -- import {
+- `./agentic-os-v2/command-centre/src/lib/task-chat.ts` (28 lines, .ts) -- import type { LogEntry, TaskStatus } from \"@/types/task\";
+- `./agentic-os-v2/command-centre/src/lib/task-logs.ts` (643 lines, .ts) -- import type Database from \"better-sqlite3\";
+- `./agentic-os-v2/command-centre/src/lib/task-permissions.ts` (34 lines, .ts) -- export const PERMISSION_REQUIRED_ACTIVITY_LABEL = \"Needs permission\";
+- `./agentic-os-v2/command-centre/src/lib/terminal-sessions.ts` (130 lines, .ts) -- import { spawn, type ChildProcess } from \"child_process\";
+- `./agentic-os-v2/command-centre/src/lib/worktree-manager.ts` (282 lines, .ts) -- import { execSync, exec } from \"child_process\";
+- `./agentic-os-v2/command-centre/src/store/chat-store.ts` (334 lines, .ts) -- import { create } from \"zustand\";
+- `./agentic-os-v2/command-centre/src/store/client-store.ts` (288 lines, .ts) -- import { create } from \"zustand\";
+- `./agentic-os-v2/command-centre/src/store/context-store.ts` (24 lines, .ts) -- import { create } from \"zustand\";
+- `./agentic-os-v2/command-centre/src/store/cron-store.ts` (435 lines, .ts) -- import { create } from \"zustand\";
+- `./agentic-os-v2/command-centre/src/store/task-store.ts` (661 lines, .ts) -- import { create } from \"zustand\";
+- `./agentic-os-v2/command-centre/src/types/approval.ts` (18 lines, .ts) -- export type ApprovalRequestKind = \"permission\";
+- `./agentic-os-v2/command-centre/src/types/chat-composer.ts` (34 lines, .ts) -- export type ChatComposerSurface = \"conversation\" | \"task\" | \"question\";
+- `./agentic-os-v2/command-centre/src/types/chat.ts` (70 lines, .ts) -- import type { ChatAttachment } from \"@/types/chat-composer\";
+- `./agentic-os-v2/command-centre/src/types/client.ts` (40 lines, .ts) -- export interface Client {
+- `./agentic-os-v2/command-centre/src/types/cron.ts` (121 lines, .ts) -- export type CronResult = \"success\" | \"failure\" | \"timeout\";
+- `./agentic-os-v2/command-centre/src/types/dashboard.ts` (63 lines, .ts) -- export interface DashboardSummary {
+- `./agentic-os-v2/command-centre/src/types/file.ts` (30 lines, .ts) -- export interface FileNode {
+- `./agentic-os-v2/command-centre/src/types/goal-draft.ts` (25 lines, .ts) -- import type { ChatPastedBlock } from \"@/types/chat-composer\";
+- `./agentic-os-v2/command-centre/src/types/gsd.ts` (38 lines, .ts) -- export type PhaseStatus = \"complete\" | \"in-progress\" | \"not-started\";
+- `./agentic-os-v2/command-centre/src/types/project.ts` (25 lines, .ts) -- export interface ProjectBrief {
+- `./agentic-os-v2/command-centre/src/types/question-spec.ts` (190 lines, .ts) -- export type QuestionType = \"text\" | \"multiline\" | \"select\" | \"multiselect\";
+- `./agentic-os-v2/command-centre/src/types/task.ts` (170 lines, .ts) -- export type TaskStatus = \"backlog\" | \"queued\" | \"running\" | \"review\" | \"done\";
+- `./agentic-os-v2/context/SOUL.md` (50 lines, .md) -- You're not a chatbot. You're a growth and business assistant —
+- `./agentic-os-v2/context/USER.md` (28 lines, .md) -- - Name:
+- `./agentic-os-v2/context/learnings.md` (55 lines, .md) -- > Auto-maintained by Agentic OS skills. Newest entries at the bottom of each section.
+- `./agentic-os-v2/context/memory/2026-05-14.md` (30 lines, .md) -- Upgrade from Agentic OS v1 to v0.2.1 (Command Center), set up CMI brand context, initialize 7 projects and team member w
+- `./agentic-os-v2/context/prompt-tags.md` (21 lines, .md) -- Reusable prompt snippets that can be inlined into any task prompt by typing `@<tag-name>` in the goal bar or reply input
+- `./agentic-os-v2/cron/jobs/monthly-learnings-health.md` (70 lines, .md) -- name: Monthly Learnings Health Check
+- `./agentic-os-v2/cron/jobs/skill-update-check.md` (37 lines, .md) -- name: Skill Update Check
+- `./agentic-os-v2/cron/jobs/weekly-activity-digest.md` (62 lines, .md) -- name: Weekly Activity Digest
+- `./agentic-os-v2/cron/jobs/youtube-newsletter.md` (78 lines, .md) -- name: YouTube Newsletter
+- `./agentic-os-v2/cron/templates/daily-prompt.md` (24 lines, .md) -- name: \"daily-prompt\"
+- `./agentic-os-v2/cron/templates/example-weekly-trending.md` (36 lines, .md) -- name: \"Weekly AI Trending\"
+- `./agentic-os-v2/cron/templates/multi-step.md` (36 lines, .md) -- name: \"morning-kickoff\"
+- `./agentic-os-v2/cron/templates/schedule-reference.md` (71 lines, .md) -- name: \"Schedule Reference\"
+- `./agentic-os-v2/cron/templates/weekly-review.md` (27 lines, .md) -- name: \"weekly-review\"
+- `./agentic-os-v2/docs/cheat-sheet.md` (93 lines, .md) -- | Action | How |
+- `./agentic-os-v2/docs/multi-client-guide.md` (241 lines, .md) -- Agentic OS has two layers:
+- `./agentic-os-v2/docs/projects-guide.md` (197 lines, .md) -- Not everything is a single task. When you have a larger piece of work — a product launch, a content series, a website 
+- `./agentic-os-v2/docs/update-guide-v0.2.0.md` (298 lines, .md) -- This is a significant update. We've reorganised how the system works under the hood to make it faster, more compatible w
+- `./agentic-os-v2/projects/briefs/cpe-lenfantillage/brief.md` (57 lines, .md) -- project: cpe-lenfantillage
+- `./agentic-os-v2/scripts/add-client.sh` (279 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/add-skill.sh` (154 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/admin/grant-access.sh` (121 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/admin/list-access.sh` (72 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/admin/revoke-access.sh` (87 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/admin/setup-dev-excludes.sh` (57 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/centre.sh` (167 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/check-updates.sh` (79 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/install-crons.sh` (11 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/install.sh` (463 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/launcher-bootstrap.py` (457 lines, .py) -- from __future__ import annotations
+- `./agentic-os-v2/scripts/lib/backup.sh` (177 lines, .sh) -- STASHED=false
+- `./agentic-os-v2/scripts/lib/catalog.sh` (480 lines, .sh) -- REMOVED_SKILLS_MSG=\"\"
+- `./agentic-os-v2/scripts/lib/centre-shortcut.sh` (323 lines, .sh) -- AGENTIC_OS_CENTRE_BLOCK_START=\"# >>> Agentic OS - command centre launcher >>>\"
+- `./agentic-os-v2/scripts/lib/common.sh` (177 lines, .sh) -- GREEN='\033[0;32m'
+- `./agentic-os-v2/scripts/lib/cron-db.py` (222 lines, .py) -- import json
+- `./agentic-os-v2/scripts/lib/cron-ui.sh` (53 lines, .sh) -- CRON_UI_GREEN='\033[0;32m'
+- `./agentic-os-v2/scripts/lib/merge.sh` (359 lines, .sh) -- echo \"\"
+- `./agentic-os-v2/scripts/lib/pull.sh` (204 lines, .sh) -- info \"Checking for updates...\"
+- `./agentic-os-v2/scripts/lib/python.sh` (89 lines, .sh) -- PYTHON_CMD=()
+- `./agentic-os-v2/scripts/lib/self-update.sh` (26 lines, .sh) -- if [[ -z \"${__SELF_UPDATED:-}\" ]]; then
+- `./agentic-os-v2/scripts/lib/synthesize.py` (103 lines, .py) -- Synthesize a SKILL.local.md or CLAUDE.local.md migration artifact.
+- `./agentic-os-v2/scripts/list-skills.sh` (90 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/logs-crons.sh` (19 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/remove-skill.sh` (147 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/repair-centre-shortcut.sh` (21 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/rollback.sh` (55 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/run-crons.sh` (11 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/run-job.sh` (7 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/select-skills.py` (406 lines, .py) -- Skill selector with two modes:
+- `./agentic-os-v2/scripts/session-end.sh` (63 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/setup.sh` (236 lines, .sh) -- set -uo pipefail
+- `./agentic-os-v2/scripts/start-crons.sh` (20 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/status-crons.sh` (19 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/stop-crons.sh` (19 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/telegram.sh` (225 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/test-centre-shortcut.sh` (129 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/test-launcher-bootstrap.py` (110 lines, .py) -- from __future__ import annotations
+- `./agentic-os-v2/scripts/test-update.sh` (839 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/uninstall-crons.sh` (11 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/update-clients.sh` (334 lines, .sh) -- set -euo pipefail
+- `./agentic-os-v2/scripts/update.sh` (130 lines, .sh) -- set -euo pipefail
+- `./brand_context/VOICE.md` (55 lines, .md) -- - **Technical, not flowery** — Direct, specific, no jargon without explanation
+- `./command-centre/.backups/2026-06-05/chat-store.ts` (334 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/.backups/2026-06-05/goal-draft.ts` (25 lines, .ts) -- import type { ChatPastedBlock } from \"@/types/chat-composer\";
+- `./command-centre/.backups/2026-06-05/model-picker.tsx` (147 lines, .tsx) -- \"use client\";
+- `./command-centre/.backups/2026-06-05/route.ts` (316 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/.backups/2026-06-05/task-store.ts` (661 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/API-REFERENCE.md` (449 lines, .md) -- Complete API documentation for the Sub-agent Dispatch system.
+- `./command-centre/DEPLOYMENT-ROADMAP.md` (374 lines, .md) -- - Endpoint: `POST /api/parse-user-intent`
+- `./command-centre/README.md` (41 lines, .md) -- Command Centre launches from `command-centre`, and its explicit Next.js root stays scoped to that directory so Turbopack
+- `./command-centre/TEAM-QUICK-START.md` (234 lines, .md) -- This guide explains how the AI agent system works and how to use it.
+- `./command-centre/TEAM-TESTING-GUIDE.md` (250 lines, .md) -- - [ ] Dev server running on localhost:3006
+- `./command-centre/TEAM-TESTING-RESULTS.md` (340 lines, .md) -- | Engineer | Date | Status | Issues | Quality | Sign-Off |
+- `./command-centre/WEEK-3-IMPLEMENTATION.md` (273 lines, .md) -- Week 3 file handling infrastructure is complete and ready for integration with Week 2 chat interface. All components for
+- `./command-centre/WEEK-4-IMPLEMENTATION.md` (479 lines, .md) -- Week 4 integrates Weeks 1-3 into a fully functional AI agent chat system for CMI engineers. This phase enables:
+- `./command-centre/WEEK-4-VALIDATION-COMPLETE.md` (261 lines, .md) -- Week 4 implementation (Sub-agent Dispatch + Team Testing) is **fully operational**. All core functionality has been test
+- `./command-centre/next-env.d.ts` (6 lines, .ts) -- import \"./.next/types/routes.d.ts\";
+- `./command-centre/next.config.ts` (24 lines, .ts) -- import { dirname } from \"node:path\";
+- `./command-centre/scripts/init-agents.js` (185 lines, .js) -- const Database = require(\"better-sqlite3\");
+- `./command-centre/scripts/init-agents.ts` (152 lines, .ts) -- import { getDb } from \"../src/lib/db\";
+- `./command-centre/src/app/agents/[id]/chat/page.tsx` (57 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/agents/error.tsx` (96 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/agents/page.tsx` (9 lines, .tsx) -- import AgentList from \"@/components/AgentList\";
+- `./command-centre/src/app/api/agent-templates/[id]/deploy/route.ts` (72 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/agent-templates/route.ts` (52 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/agents/[id]/chat/sessions/[sessionId]/messages/route.ts` (376 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/agents/[id]/chat/sessions/route.ts` (95 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/agents/[id]/execute/route.ts` (147 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/agents/[id]/route.ts` (109 lines, .ts) -- import { getDb } from \"@/lib/db\";
+- `./command-centre/src/app/api/agents/[id]/share/route.ts` (110 lines, .ts) -- import { getDb } from \"@/lib/db\";
+- `./command-centre/src/app/api/agents/import-wayland/route.ts` (192 lines, .ts) -- import { getDb } from \"@/lib/db\";
+- `./command-centre/src/app/api/agents/route.ts` (79 lines, .ts) -- import { getDb } from \"@/lib/db\";
+- `./command-centre/src/app/api/board-columns/route.ts` (156 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/brand/route.ts` (45 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/briefs/sync/route.ts` (145 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/chat/attachments/route.ts` (67 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/chat/conversations/[id]/messages/route.ts` (28 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/chat/conversations/[id]/route.ts` (54 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/chat/conversations/route.ts` (81 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/chat/message/route.ts` (316 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/clients/route.ts` (15 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/context/brand/route.ts` (41 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/context/route.ts` (87 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/cron/[name]/history/route.ts` (20 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/cron/[name]/logs/route.ts` (20 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/cron/[name]/route.ts` (87 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/cron/[name]/run/route.ts` (53 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/cron/[name]/source/route.ts` (25 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/cron/[name]/toggle/route.ts` (26 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/cron/route.ts` (68 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/cron/system-status/route.ts` (17 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/dashboard/summary/route.ts` (405 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/deploy/route.ts` (141 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/events/route.ts` (78 lines, .ts) -- import { onTaskEvent, offTaskEvent, onChatEvent, offChatEvent } from \"@/lib/event-bus\";
+- `./command-centre/src/app/api/files/[...path]/route.ts` (144 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/files/download/route.ts` (41 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/files/preview/route.ts` (148 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/files/recent/route.ts` (36 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/files/reveal/route.ts` (40 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/files/route.ts` (44 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/files/upload/route.ts` (73 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/goal-drafts/attachments/route.ts` (56 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/gsd/archive/route.ts` (45 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/gsd/complete/route.ts` (35 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/gsd/ensure-task/route.ts` (315 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/gsd/files/route.ts` (135 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/gsd/phase-status/route.ts` (154 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/gsd/route.ts` (87 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/gsd/status/route.ts` (45 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/ha/route.ts` (104 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/memory/route.ts` (191 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/notifications/[id]/read/route.ts` (19 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/notifications/route.ts` (81 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/parse-agent-intent/route.ts` (190 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/parse-user-intent/route.ts` (222 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/projects/[slug]/brief/route.ts` (36 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/projects/[slug]/tasks-from-brief/route.ts` (242 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/projects/[slug]/tasks-from-scope/route.ts` (267 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/projects/route.ts` (320 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/prompt-tags/route.ts` (9 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/saved-views/route.ts` (110 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/search/route.ts` (132 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/settings/claude-settings/route.ts` (84 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/settings/env/route.ts` (70 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/settings/kilo-config/route.ts` (55 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/settings/mcp/route.ts` (78 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/settings/scripts/route.ts` (6 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/settings/scripts/run/route.ts` (141 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/skills/route.ts` (61 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tags/[id]/route.ts` (66 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tags/route.ts` (51 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/approval-requests/[requestId]/route.ts` (69 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/approval-requests/route.ts` (23 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/cancel/route.ts` (44 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/comments/route.ts` (67 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/execute/route.ts` (58 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/logs/route.ts` (218 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/app/api/tasks/[id]/outputs/route.ts` (160 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/reply/route.ts` (320 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/route.ts` (482 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/status/route.ts` (140 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/sync-phases/route.ts` (203 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/[id]/tags/route.ts` (93 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/cluster-goals/route.ts` (129 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/generate-title/route.ts` (83 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/history/route.ts` (118 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/plan-subtasks/route.ts` (251 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/retitle-all/route.ts` (209 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/route.ts` (247 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/scope-goal/route.ts` (456 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/sync-projects/route.ts` (263 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/sync-session/route.ts` (167 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/tasks/tags/route.ts` (11 lines, .ts) -- import { NextResponse } from \"next/server\";
+- `./command-centre/src/app/api/terminal/exec/route.ts` (105 lines, .ts) -- import { NextRequest } from \"next/server\";
+- `./command-centre/src/app/api/upload/route.ts` (77 lines, .ts) -- import { NextRequest, NextResponse } from \"next/server\";
+- `./command-centre/src/app/autonomous/page.tsx` (5 lines, .tsx) -- import { redirect } from \"next/navigation\";
+- `./command-centre/src/app/board/error.tsx` (95 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/board/page.tsx` (10 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/brand/page.tsx` (12 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/calendar/page.tsx` (7 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/context/page.tsx` (12 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/cron/page.tsx` (12 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/dashboard/error.tsx` (96 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/dashboard/page.tsx` (645 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/docs/page.tsx` (33 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/global-error.tsx` (23 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/gsd/page.tsx` (584 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/history/page.tsx` (1172 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/layout.tsx` (51 lines, .tsx) -- import type { Metadata } from \"next\";
+- `./command-centre/src/app/list/page.tsx` (4 lines, .tsx) -- import ListView from \"@/components/tasks/list-view\";
+- `./command-centre/src/app/page.tsx` (433 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/settings/page.tsx` (51 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/skills/page.tsx` (99 lines, .tsx) -- \"use client\";
+- `./command-centre/src/app/tasks/page.tsx` (8 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/AgentBuilder.tsx` (962 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/AgentList.tsx` (367 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/FilePreview.tsx` (69 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/FileUploader.tsx` (205 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/NaturalLanguageAgentBuilder.tsx` (603 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/agents/agent-chat-session.tsx` (334 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/agents/agents-view.tsx` (817 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/autonomous/agent-decision-card.tsx` (71 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/autonomous/bubbled-question.tsx` (737 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/autonomous/chat-input.tsx` (280 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/autonomous/chat-panel.tsx` (253 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/autonomous/chat-view.tsx` (255 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/autonomous/status-sidebar.tsx` (227 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/board-settings.tsx` (356 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/brand-context-banner.tsx` (91 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/client-filter-bar.tsx` (242 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/feed-card.tsx` (466 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/feed-view.tsx` (5018 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/file-preview-modal.tsx` (474 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/goal-chips.tsx` (94 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/goal-draft-card.tsx` (192 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/kanban-board.tsx` (779 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/kanban-column-active.tsx` (31 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/kanban-column-done.tsx` (328 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/level-badge.tsx` (50 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/new-goal-panel.tsx` (1323 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/output-chips.tsx` (79 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/review-banner.tsx` (114 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/review-queue.tsx` (759 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/routing-decision-card.tsx` (319 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/subtask-status-strip.tsx` (63 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/board/task-create-input.tsx` (1192 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/brand/brand-card-grid.tsx` (189 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/brand/brand-detail-panel.tsx` (368 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/chat/ChatInput.tsx` (307 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/chat/ChatMessage.tsx` (148 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/chat/ChatWindow.tsx` (462 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/context/content-viewer.tsx` (579 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/context/context-file-list.tsx` (461 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/context/file-tree.tsx` (192 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/cron/create-job-panel.tsx` (313 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/cron/cron-row.tsx` (607 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/cron/cron-table.tsx` (266 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/cron/run-history.tsx` (428 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/cron/runtime-status.tsx` (119 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/cron/schedule-selector.tsx` (196 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/dashboard/active-projects.tsx` (204 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/dashboard/activity-pulse.tsx` (218 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/dashboard/awaiting-review.tsx` (159 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/dashboard/client-breakdown.tsx` (197 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/dashboard/greeting-header.tsx` (59 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/dashboard/open-threads.tsx` (2 lines, .tsx) -- export {};
+- `./command-centre/src/components/dashboard/recent-completions.tsx` (137 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/dashboard/system-health.tsx` (111 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/dashboard/token-usage.tsx` (2 lines, .tsx) -- export {};
+- `./command-centre/src/components/docs/docs-file-tree.tsx` (847 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/gsd/phase-detail.tsx` (454 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/gsd/phase-pipeline.tsx` (147 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/ha/ha-view.tsx` (388 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/layout/app-shell.tsx` (60 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/layout/app-sidebar.tsx` (156 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/layout/client-switcher.tsx` (359 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/layout/scope-bar.tsx` (126 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/layout/sidebar.tsx` (201 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/layout/stats-bar.tsx` (234 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/chat-entry.tsx` (1426 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/chat-list.tsx` (614 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/chat-pane.tsx` (302 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/gsd-guardrail-modal.tsx` (692 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/modal-chat.tsx` (1732 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/modal-file-preview.tsx` (434 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/modal-header.tsx` (417 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/modal-new-task-form.tsx` (346 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/modal-sidebar.tsx` (91 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/modal-summary-tab.tsx` (1078 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/next-action-chips.tsx` (344 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/pane-container.tsx` (553 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/phase-progress-strip.tsx` (372 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/project-dashboard.tsx` (986 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/reply-input.tsx` (730 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/scoping-wizard-panel.tsx` (1824 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/subtasks-strip.tsx` (2 lines, .tsx) -- export {};
+- `./command-centre/src/components/modal/task-modal.tsx` (991 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/task-progress.tsx` (85 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/modal/terminal-pane.tsx` (267 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/panel/panel-header.tsx` (163 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/panel/panel-outputs.tsx` (441 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/panel/panel-stats.tsx` (169 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/panel/task-detail-panel.tsx` (7 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/previews/DefaultPreview.tsx` (59 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/previews/FileNotSupportedPreview.tsx` (61 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/previews/ImagePreview.tsx` (64 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/previews/PdfPreview.tsx` (57 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/previews/PresentationPreview.tsx` (47 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/previews/SpreadsheetPreview.tsx` (106 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/previews/VideoPreview.tsx` (47 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/settings/color-editor.tsx` (273 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/settings/env-editor.tsx` (202 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/settings/env-row.tsx` (185 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/settings/json-editor.tsx` (396 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/settings/script-confirm-modal.tsx` (123 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/settings/script-list.tsx` (388 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/settings/script-runner.tsx` (243 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/settings/settings-tabs.tsx` (77 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/attachment-asset-grid.tsx` (1120 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/chat-attachment-strip.tsx` (104 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/composer-asset-tray.tsx` (41 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/composer-draft-asset-collection.tsx` (58 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/draft-plan-preview.tsx` (246 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/file-upload.tsx` (278 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/filter-bar.tsx` (509 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/markdown-editor.tsx` (89 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/markdown-preview.tsx` (234 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/model-picker.tsx` (150 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/notification-bell.tsx` (294 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/pasted-text-card.tsx` (323 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/permission-picker.tsx` (156 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/priority-badge.tsx` (124 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/question-modal.tsx` (948 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/resizable-pane.tsx` (153 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/scoped-file-tree.tsx` (207 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/search-bar.tsx` (452 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/slash-command-menu.tsx` (546 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/slide-out-panel.tsx` (130 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/tag-picker.tsx` (470 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/task-approval-actions.tsx` (433 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/tasks-popover.tsx` (408 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/shared/toast.tsx` (117 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/skills/skill-card.tsx` (166 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/skills/skill-upload-modal.tsx` (695 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/skills/skills-file-tree.tsx` (262 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/skills/skills-grid.tsx` (198 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/skills/skills-summary.tsx` (420 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/sse-provider.tsx` (8 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/tasks/calendar-view.tsx` (599 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/tasks/list-view.tsx` (525 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/tasks/tasks-view.tsx` (1184 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/theme-provider.tsx` (341 lines, .tsx) -- \"use client\";
+- `./command-centre/src/components/theme-toggle.tsx` (36 lines, .tsx) -- \"use client\";
+- `./command-centre/src/hooks/use-chat-composer.ts` (439 lines, .ts) -- \"use client\";
+- `./command-centre/src/hooks/use-client-id.ts` (18 lines, .ts) -- import { useClientStore } from \"@/store/client-store\";
+- `./command-centre/src/hooks/use-composer-resize.ts` (80 lines, .ts) -- \"use client\";
+- `./command-centre/src/hooks/use-gsd-sync.ts` (18 lines, .ts) -- import { useEffect, useRef } from \"react\";
+- `./command-centre/src/hooks/use-pane-state.ts` (343 lines, .ts) -- \"use client\";
+- `./command-centre/src/hooks/use-projects.ts` (39 lines, .ts) -- \"use client\";
+- `./command-centre/src/hooks/use-sse.ts` (91 lines, .ts) -- \"use client\";
+- `./command-centre/src/instrumentation.ts` (34 lines, .ts) -- export async function register() {
+- `./command-centre/src/lib/agent-cache.ts` (110 lines, .ts) -- import { getDb } from \"./db\";
+- `./command-centre/src/lib/agent-memory.ts` (484 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/agents.ts` (25 lines, .ts) -- import { getDb } from \"./db\";
+- `./command-centre/src/lib/api-error.ts` (15 lines, .ts) -- export async function readApiError(
+- `./command-centre/src/lib/approval-request-format.ts` (122 lines, .ts) -- function getPathLike(input: unknown): string | null {
+- `./command-centre/src/lib/approval-requests.ts` (113 lines, .ts) -- import crypto from \"crypto\";
+- `./command-centre/src/lib/attachment-content.ts` (329 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/auth-middleware.ts` (85 lines, .ts) -- import { Request, Response, NextFunction } from 'express'; // or Next.js equivalent
+- `./command-centre/src/lib/backend-router.ts` (142 lines, .ts) -- export type BackendType = \"claude-cli\" | \"api-proxy\" | \"kilo-gateway\";
+- `./command-centre/src/lib/brief-sync.ts` (150 lines, .ts) -- function stripCheckbox(text: string): string {
+- `./command-centre/src/lib/chat-attachment-policy.ts` (57 lines, .ts) -- const CHAT_ATTACHMENT_EXTENSIONS = [
+- `./command-centre/src/lib/chat-attachment-service.ts` (363 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/chat-drafts.ts` (145 lines, .ts) -- import type { ChatComposerSurface, ChatDraftPayload } from \"@/types/chat-composer\";
+- `./command-centre/src/lib/chat-message-content.ts` (38 lines, .ts) -- import type { ChatAttachment, ChatPastedBlock } from \"@/types/chat-composer\";
+- `./command-centre/src/lib/chat-session-memory.ts` (46 lines, .ts) -- const STORAGE_PREFIX = \"cc.chat-session:v1:\";
+- `./command-centre/src/lib/claude-parser.ts` (506 lines, .ts) -- import type { LogEntry, Todo } from \"@/types/task\";
+- `./command-centre/src/lib/clients.ts` (99 lines, .ts) -- import { createHash } from \"crypto\";
+- `./command-centre/src/lib/composer.ts` (81 lines, .ts) -- import type { KeyboardEvent as ReactKeyboardEvent } from \"react\";
+- `./command-centre/src/lib/config.ts` (200 lines, .ts) -- import path from \"path\";
+- `./command-centre/src/lib/cost-calculator.ts` (152 lines, .ts) -- const PRICING: Record<string, Record<string, { prompt: number; completion: number }>> = {
+- `./command-centre/src/lib/cron-runtime.js` (2845 lines, .js) -- const fs = require(\"fs\");
+- `./command-centre/src/lib/cron-scheduler.ts` (192 lines, .ts) -- import { getConfig } from \"./config\";
+- `./command-centre/src/lib/cron-service.ts` (146 lines, .ts) -- import { getConfig } from \"./config\";
+- `./command-centre/src/lib/cron-system-status.ts` (35 lines, .ts) -- import { getConfig } from \"./config\";
+- `./command-centre/src/lib/cron-task-sync.ts` (100 lines, .ts) -- import { getDb } from \"./db\";
+- `./command-centre/src/lib/db.ts` (694 lines, .ts) -- import Database from \"better-sqlite3\";
+- `./command-centre/src/lib/env-parser.ts` (26 lines, .ts) -- export interface EnvEntry {
+- `./command-centre/src/lib/event-bus.ts` (76 lines, .ts) -- import { EventEmitter } from \"events\";
+- `./command-centre/src/lib/file-diff.ts` (112 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/file-icons.ts` (132 lines, .ts) -- import {
+- `./command-centre/src/lib/file-node-response.ts` (12 lines, .ts) -- import type { FileNode } from \"@/types/file\";
+- `./command-centre/src/lib/file-service.ts` (246 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/file-utils.ts` (151 lines, .ts) -- export type SupportedFileType = \"xlsx\" | \"pdf\" | \"dwg\" | \"pptx\" | \"image\" | \"video\";
+- `./command-centre/src/lib/file-watcher.ts` (171 lines, .ts) -- import { watch, type FSWatcher } from \"chokidar\";
+- `./command-centre/src/lib/gather-context.ts` (262 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/goal-draft-attachment-service.ts` (142 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/goal-draft-panel-state.ts` (59 lines, .ts) -- export interface GoalDraftPanelState {
+- `./command-centre/src/lib/goal-drafts.ts` (125 lines, .ts) -- import type { GoalDraftPayload } from \"@/types/goal-draft\";
+- `./command-centre/src/lib/gsd-parser.ts` (129 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/level-signals.ts` (60 lines, .ts) -- import type { TaskLevel } from \"@/types/task\";
+- `./command-centre/src/lib/levels.ts` (32 lines, .ts) -- import type { TaskLevel } from \"@/types/task\";
+- `./command-centre/src/lib/llm-credentials.ts` (75 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/llm-router.ts` (239 lines, .ts) -- import { loadCredential } from \"./llm-credentials\";
+- `./command-centre/src/lib/memory-provider.ts` (969 lines, .ts) -- import type { ChatMessage } from \"./llm-router\";
+- `./command-centre/src/lib/mep-context.ts` (181 lines, .ts) -- import { getDb } from './db';
+- `./command-centre/src/lib/pasted-text.ts` (94 lines, .ts) -- export const PASTED_TEXT_LINE_THRESHOLD = 8;
+- `./command-centre/src/lib/permission-mode.ts` (103 lines, .ts) -- import type { PermissionMode, TaskStatus } from \"@/types/task\";
+- `./command-centre/src/lib/plan-brief.server.ts` (33 lines, .ts) -- import \"server-only\";
+- `./command-centre/src/lib/plan-brief.ts` (232 lines, .ts) -- import {
+- `./command-centre/src/lib/process-manager.ts` (2389 lines, .ts) -- import type { ChildProcess } from \"child_process\";
+- `./command-centre/src/lib/prompt-tags.ts` (190 lines, .ts) -- import fs from \"fs\";
+- `./command-centre/src/lib/queue-watcher.ts` (411 lines, .ts) -- import { onTaskEvent, emitTaskEvent, type TaskEvent } from \"./event-bus\";
+- `./command-centre/src/lib/rbac.ts` (178 lines, .ts) -- import { getDb } from \"./db\";
+- `./command-centre/src/lib/run-claude-text-prompt.ts` (65 lines, .ts) -- import { killChildProcessTree, spawnUiProcess } from \"@/lib/subprocess\";
+- `./command-centre/src/lib/script-registry.ts` (43 lines, .ts) -- export interface ArgDefinition {
+- `./command-centre/src/lib/script-runner-session.ts` (36 lines, .ts) -- export interface ScriptRunnerSession {
+- `./command-centre/src/lib/skill-invoker.ts` (169 lines, .ts) -- import { getDb } from './db';
+- `./command-centre/src/lib/slash-commands.ts` (79 lines, .ts) -- export interface SlashCommand {
+- `./command-centre/src/lib/subprocess.ts` (80 lines, .ts) -- import {
+- `./command-centre/src/lib/task-chat.ts` (28 lines, .ts) -- import type { LogEntry, TaskStatus } from \"@/types/task\";
+- `./command-centre/src/lib/task-logs.ts` (643 lines, .ts) -- import type Database from \"better-sqlite3\";
+- `./command-centre/src/lib/task-permissions.ts` (34 lines, .ts) -- export const PERMISSION_REQUIRED_ACTIVITY_LABEL = \"Needs permission\";
+- `./command-centre/src/lib/terminal-sessions.ts` (130 lines, .ts) -- import { spawn, type ChildProcess } from \"child_process\";
+- `./command-centre/src/lib/user-context.ts` (62 lines, .ts) -- import { NextRequest } from \"next/server\";
+- `./command-centre/src/lib/worktree-manager.ts` (282 lines, .ts) -- import { execSync, exec } from \"child_process\";
+- `./command-centre/src/store/chat-store.ts` (334 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/src/store/client-store.ts` (288 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/src/store/context-store.ts` (24 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/src/store/cron-store.ts` (435 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/src/store/filter-store.ts` (141 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/src/store/notification-store.ts` (84 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/src/store/task-store.ts` (664 lines, .ts) -- import { create } from \"zustand\";
+- `./command-centre/src/types/agent-chat.ts` (22 lines, .ts) -- import type { ChatAttachment } from \"@/types/chat-composer\";
+- `./command-centre/src/types/approval.ts` (18 lines, .ts) -- export type ApprovalRequestKind = \"permission\";
+- `./command-centre/src/types/chat-composer.ts` (34 lines, .ts) -- export type ChatComposerSurface = \"conversation\" | \"task\" | \"question\";
+- `./command-centre/src/types/chat.ts` (70 lines, .ts) -- import type { ChatAttachment } from \"@/types/chat-composer\";
+- `./command-centre/src/types/client.ts` (40 lines, .ts) -- export interface Client {
+- `./command-centre/src/types/cron.ts` (121 lines, .ts) -- export type CronResult = \"success\" | \"failure\" | \"timeout\";
+- `./command-centre/src/types/dashboard.ts` (70 lines, .ts) -- export interface DashboardSummary {
+- `./command-centre/src/types/file.ts` (30 lines, .ts) -- export interface FileNode {
+- `./command-centre/src/types/goal-draft.ts` (25 lines, .ts) -- import type { ChatPastedBlock } from \"@/types/chat-composer\";
+- `./command-centre/src/types/gsd.ts` (38 lines, .ts) -- export type PhaseStatus = \"complete\" | \"in-progress\" | \"not-started\";
+- `./command-centre/src/types/project.ts` (25 lines, .ts) -- export interface ProjectBrief {
+- `./command-centre/src/types/question-spec.ts` (190 lines, .ts) -- export type QuestionType = \"text\" | \"multiline\" | \"select\" | \"multiselect\";
+- `./command-centre/src/types/task.ts` (214 lines, .ts) -- export type TaskStatus = \"backlog\" | \"queued\" | \"running\" | \"review\" | \"done\";
+- `./command-centre/tests/TEAM-TESTING-GUIDE.md` (272 lines, .md) -- 1. **Charles Morissette** - Mechanical engineer, coordinator
+- `./command-centre/tests/TEAM-TESTING-RESULTS.md` (244 lines, .md) -- - [ ] Scenario 1: Personal Assistant - Not started
+- `./command-centre/tests/agents/jasper.test.ts` (167 lines, .ts) -- import { describe, it, expect } from \"@jest/globals\";
+- `./command-centre/tests/agents/sensei.test.ts` (260 lines, .ts) -- import { describe, it, expect } from \"@jest/globals\";
+- `./command-centre/tests/manual-validation.ts` (289 lines, .ts) -- import { getDb } from \"@/lib/db\";
+- `./command-centre/tests/run-test-session.ts` (281 lines, .ts) -- import fs from \"fs\";
+- `./context/SOUL.md` (50 lines, .md) -- You're not a chatbot. You're a growth and business assistant —
+- `./context/USER.md` (28 lines, .md) -- - Name:
+- `./context/learnings.md` (55 lines, .md) -- > Auto-maintained by Agentic OS skills. Newest entries at the bottom of each section.
+- `./context/memory/2026-05-14.md` (52 lines, .md) -- Upgrade from Agentic OS v1 to v0.2.1 (Command Center), set up CMI brand context, initialize 7 projects and team member w
+- `./context/prompt-tags.md` (21 lines, .md) -- Reusable prompt snippets that can be inlined into any task prompt by typing `@<tag-name>` in the goal bar or reply input
+- `./cron/jobs/monthly-learnings-health.md` (70 lines, .md) -- name: Monthly Learnings Health Check
+- `./cron/jobs/skill-update-check.md` (37 lines, .md) -- name: Skill Update Check
+- `./cron/jobs/weekly-activity-digest.md` (62 lines, .md) -- name: Weekly Activity Digest
+- `./cron/jobs/youtube-newsletter.md` (78 lines, .md) -- name: YouTube Newsletter
+- `./cron/templates/daily-prompt.md` (24 lines, .md) -- name: \"daily-prompt\"
+- `./cron/templates/example-weekly-trending.md` (36 lines, .md) -- name: \"Weekly AI Trending\"
+- `./cron/templates/multi-step.md` (36 lines, .md) -- name: \"morning-kickoff\"
+- `./cron/templates/schedule-reference.md` (71 lines, .md) -- name: \"Schedule Reference\"
+- `./cron/templates/weekly-review.md` (27 lines, .md) -- name: \"weekly-review\"
+- `./docs/architecture/ai-review-agent-architecture.md` (236 lines, .md) -- | Decision | Rationale |
+- `./docs/architecture/excel-template-architecture.md` (257 lines, .md) -- | Decision | Rationale |
+- `./docs/cheat-sheet.md` (93 lines, .md) -- | Action | How |
+- `./docs/jarvis-computer-use-setup.md` (149 lines, .md) -- ```
+- `./docs/multi-client-guide.md` (241 lines, .md) -- Agentic OS has two layers:
+- `./docs/projects-guide.md` (197 lines, .md) -- Not everything is a single task. When you have a larger piece of work — a product launch, a content series, a website 
+- `./docs/update-guide-v0.2.0.md` (298 lines, .md) -- This is a significant update. We've reorganised how the system works under the hood to make it faster, more compatible w
+- `./jasper-agent.py` (35 lines, .py) -- Jasper as Claude Code Primary Agent
+- `./jasper.py` (363 lines, .py) -- Jasper Orchestrator Agent
+- `./memories/claude/MEMORY.md` (15 lines, .md) -- Initialized 2026-06-05. Agentic OS Memory System active.
+- `./memories/claude/USER.md` (17 lines, .md) -- §
+- `./memories/claude/today.md` (1 lines, .md) -- 2026-06-05 — session start: Memory system active
+- `./memories/claude/yesterday.md` (3 lines, .md) -- (No prior sessions yet — memory system initialized 2026-06-05)
+- `./memories/codex/MEMORY.md` (15 lines, .md) -- Initialized 2026-06-05. Agentic OS Memory System active.
+- `./memories/codex/USER.md` (17 lines, .md) -- §
+- `./memories/codex/today.md` (1 lines, .md) -- 2026-06-05 — session start: Memory system active
+- `./memories/codex/yesterday.md` (3 lines, .md) -- (No prior sessions yet — memory system initialized 2026-06-05)
+- `./memories/jasper/MEMORY.md` (15 lines, .md) -- Initialized 2026-06-05. Agentic OS Memory System active.
+- `./memories/jasper/USER.md` (17 lines, .md) -- §
+- `./memories/jasper/today.md` (1 lines, .md) -- 2026-06-05 — session start: Memory system active
+- `./memories/jasper/yesterday.md` (3 lines, .md) -- (No prior sessions yet — memory system initialized 2026-06-05)
+- `./projects/briefs/cpe-lenfantillage/brief.md` (57 lines, .md) -- project: cpe-lenfantillage
+- `./scripts/add-client.sh` (279 lines, .sh) -- set -euo pipefail
+- `./scripts/add-skill.sh` (154 lines, .sh) -- set -euo pipefail
+- `./scripts/admin/grant-access.sh` (121 lines, .sh) -- set -euo pipefail
+- `./scripts/admin/list-access.sh` (72 lines, .sh) -- set -euo pipefail
+- `./scripts/admin/revoke-access.sh` (87 lines, .sh) -- set -euo pipefail
+- `./scripts/admin/setup-dev-excludes.sh` (57 lines, .sh) -- set -euo pipefail
+- `./scripts/centre.sh` (167 lines, .sh) -- set -euo pipefail
+- `./scripts/check-updates.sh` (79 lines, .sh) -- set -euo pipefail
+- `./scripts/install-crons.sh` (11 lines, .sh) -- set -euo pipefail
+- `./scripts/install.sh` (463 lines, .sh) -- set -euo pipefail
+- `./scripts/launcher-bootstrap.py` (457 lines, .py) -- from __future__ import annotations
+- `./scripts/lib/backup.sh` (177 lines, .sh) -- STASHED=false
+- `./scripts/lib/catalog.sh` (480 lines, .sh) -- REMOVED_SKILLS_MSG=\"\"
+- `./scripts/lib/centre-shortcut.sh` (323 lines, .sh) -- AGENTIC_OS_CENTRE_BLOCK_START=\"# >>> Agentic OS - command centre launcher >>>\"
+- `./scripts/lib/common.sh` (177 lines, .sh) -- GREEN='\033[0;32m'
+- `./scripts/lib/cron-db.py` (222 lines, .py) -- import json
+- `./scripts/lib/cron-ui.sh` (53 lines, .sh) -- CRON_UI_GREEN='\033[0;32m'
+- `./scripts/lib/merge.sh` (359 lines, .sh) -- echo \"\"
+- `./scripts/lib/pull.sh` (204 lines, .sh) -- info \"Checking for updates...\"
+- `./scripts/lib/python.sh` (89 lines, .sh) -- PYTHON_CMD=()
+- `./scripts/lib/self-update.sh` (26 lines, .sh) -- if [[ -z \"${__SELF_UPDATED:-}\" ]]; then
+- `./scripts/lib/synthesize.py` (103 lines, .py) -- Synthesize a SKILL.local.md or CLAUDE.local.md migration artifact.
+- `./scripts/list-skills.sh` (90 lines, .sh) -- set -euo pipefail
+- `./scripts/logs-crons.sh` (19 lines, .sh) -- set -euo pipefail
+- `./scripts/remove-skill.sh` (147 lines, .sh) -- set -euo pipefail
+- `./scripts/repair-centre-shortcut.sh` (21 lines, .sh) -- set -euo pipefail
+- `./scripts/rollback.sh` (55 lines, .sh) -- set -euo pipefail
+- `./scripts/run-crons.sh` (11 lines, .sh) -- set -euo pipefail
+- `./scripts/run-job.sh` (7 lines, .sh) -- set -euo pipefail
+- `./scripts/select-skills.py` (406 lines, .py) -- Skill selector with two modes:
+- `./scripts/session-end.sh` (63 lines, .sh) -- set -euo pipefail
+- `./scripts/setup.sh` (236 lines, .sh) -- set -uo pipefail
+- `./scripts/start-crons.sh` (20 lines, .sh) -- set -euo pipefail
+- `./scripts/status-crons.sh` (19 lines, .sh) -- set -euo pipefail
+- `./scripts/stop-crons.sh` (19 lines, .sh) -- set -euo pipefail
+- `./scripts/telegram.sh` (225 lines, .sh) -- set -euo pipefail
+- `./scripts/test-centre-shortcut.sh` (129 lines, .sh) -- set -euo pipefail
+- `./scripts/test-launcher-bootstrap.py` (110 lines, .py) -- from __future__ import annotations
+- `./scripts/test-update.sh` (839 lines, .sh) -- set -euo pipefail
+- `./scripts/uninstall-crons.sh` (11 lines, .sh) -- set -euo pipefail
+- `./scripts/update-clients.sh` (334 lines, .sh) -- set -euo pipefail
+- `./scripts/update.sh` (130 lines, .sh) -- set -euo pipefail
+- `./setup.sh` (314 lines, .sh) -- set -e
+
+## By language
+- .ts: 337
+- .md: 322
+- .tsx: 285
+- .py: 128
+- .sh: 80
+- .js: 31

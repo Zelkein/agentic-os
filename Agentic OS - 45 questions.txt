@@ -1,0 +1,184 @@
+Système 1 — MEP Checklist + Automated Calculation System
+
+Top 10-15 erreurs de coordination que je vois le plus souvent —
+
+Je vois surtout : 1) shafts/risers sous-dimensionnés ou mal placés, 2) retombées/plénums insuffisants, 3) percements en murs/planchers coupe-feu oubliés, 4) conflits drains/pentes/structure, 5) prises et rejets d’air mal coordonnés, 6) équipements trop gros pour les locaux techniques, 7) équipements non alignés avec les charges, 8) CFM/sommaires/schedules non cohérents entre calculs et plans, 9) conflits entre cheminements électriques et mécanique, 10) condensats/drains oubliés, 11) accès d’entretien non prévus, 12) cuisines/commerces qui changent trop tard, 13) contrôles/intercom/accès qui bougent après le design, 14) coordination toiture/écran mécanique incomplète, 15) détails de transition archi/MEP laissés implicites.
+
+La checklist diffère-t-elle par type de projet ? —
+
+Oui. Le noyau reste le même, mais un APH répétitif, un vrai mandat MEP complet et une rénovation n’ont pas les mêmes points sensibles. Je veux donc un tronc commun + des modules par type.
+
+Qu’est-ce qui est dans ma tête quand je fais une revue de coordination ? —
+
+J’ai toujours la même séquence en tête : est-ce que le projet est coordonné discipline par discipline, est-ce que les hypothèses de base sont claires, est-ce que les espaces techniques existent vraiment, est-ce que les cheminements sont faisables, est-ce que les calculs supportent les choix, puis seulement après est-ce qu’on peut dessiner.
+
+Format préféré —
+
+Pour commencer, je préfère un fichier Excel ou Google Sheets structuré. C’est simple, flexible, partageable, et ça permet de lier la checklist aux calculs. Un web form pourra venir plus tard, mais je ne commencerais pas par un PDF.
+
+Comment les calculs de ductwork sont faits actuellement ? —
+
+Actuellement, les calculs de ductwork se font avec les "online ductulator" en function des débits. 
+Il n’y a pas encore un système unique et verrouillé pour toute l’équipe.
+
+Même question pour piping, electrical load et autres systèmes MEP —
+
+C’est la même logique pour le piping et les charges électriques : Excel, calculs manuels, morceaux de templates, et validation par expérience. Pour l’énergie/APH, on a aussi des outils spécialisés selon le mandate (Carrier HAP 6.3), mais l’ensemble n’est pas encore intégré dans une seule chaîne cohérente.
+
+Qui fait les calculs ? —
+
+Les calculs sont faits par plusieurs personnes selon la discipline, pas par une seule. Mon rôle aujourd’hui est encore trop souvent celui du validateur final de tout. Idéalement, chaque discipline produit ses calculs et le système me remonte seulement les écarts ou les cas limites.
+
+Quels outils logiciels existent déjà ? —
+
+Les outils existants sont surtout Excel, AutoCAD, PDF, ClickUp, Google Drive et quelques outils spécialisés selon le type de projet (Comme Carrier HAP 6.3). Le problème n’est pas l’absence d’outils, c’est surtout l’absence d’un flux standardisé entre coordination, calcul et dessin.
+
+Quelles incohérences causent des redraws ? —
+
+Les plus fréquentes sont : CFM qui ne match pas les charges, équipement choisi qui ne match pas les besoins, dimensions de conduits ou de tuyauterie non cohérentes avec les débits, panel/load summary non cohérent avec les plans, drains/vents mal dimensionnés, et coordination spatiale qui casse une fois rendu en dessin. Coordination avec les autres professionnels qui n'est pas assez assidu.
+
+Comment le système devrait signaler les erreurs ? — Solide
+Je veux que les erreurs soient signalées d’abord dans l’outil de travail lui-même : cellule en erreur, ligne bloquée, code couleur, commentaire clair. Ensuite, un résumé des red flags importants peut être envoyé au responsable. Je ne veux pas dépendre du courriel pour les erreurs de base.
+Qui voit les red flags ? — Solide
+Le premier niveau doit être la personne qui fait le calcul. Ensuite le lead de discipline ou le chargé du projet. Moi, je veux surtout voir les red flags majeurs, pas tout le bruit.
+Checklist et calculs dans le même fichier Excel ou systèmes séparés ? — Solide
+Je veux que checklist et calculs soient connectés, mais pas nécessairement mélangés dans le même onglet. Mon réflexe serait un même workbook ou une même structure de données, avec des sections séparées mais reliées.
+La checklist devrait-elle être auto-remplie ? — Solide
+Oui. Elle devrait être préremplie par les métadonnées du projet quand c’est possible : type de projet, discipline, phase, adresse, client, architecte, présence de cuisine/commerces/garage, etc. Ça évite du bruit et des oublis.
+Système 2 — Convert CAD Tables to Excel + Build Calculation Systems
+
+Quelle version d’AutoCAD l’équipe utilise ? — À ajuster
+
+Autocad 2023, mais on se tient relativement à jour.
+
+Quels types de tables/schedules sont dans CAD ? —
+
+Typiquement : schedules d’équipements, sommaires de charges, tableaux de panneaux, sommaires de ventilation/ductwork, listes de plomberie et autres tableaux de coordination qui finissent sur les plans.
+
+Ces tables font-elles partie du dessin ou sont-elles des attachments externes ? — Moyen
+
+Dans la majorité des cas, ces tables font partie du dessin ou d’un jeu CAD lié au dessin. Parfois, l’information d’origine vit ailleurs dans Excel ou dans des notes, puis est recopiée dans CAD. C’est justement ce dédoublement que je veux éliminer, on pensait switcher à des tableaux excel avec un lien sur le CAD pour que le plan se mette à jour automatiquement lorsqu'on change le fichier excel.
+
+Combien de tables par projet en moyenne ? —
+
+En moyenne, je dirais qu’un projet peut avoir environ 5 à 20 tables utiles selon sa complexité. Un petit APH répétitif en a peu; un projet mixte ou commercial en a beaucoup plus.
+
+Structure de données typique d’un projet —
+
+Je viserais : 1) feuille projet/métadonnées, 2) feuille hypothèses, 3) HVAC, 4) plomberie, 5) électrique, 6) équipements/schedules, 7) validations, 8) export vers CAD. Selon le mandat, on ajoute APH/énergie ou cuisine/commercial.
+
+Un template unique ou des templates par type ? —
+
+Je ne crois pas à un seul template universel. Je crois à un noyau commun, puis à des variantes par type de projet. Les 7 projets actifs ne sont pas assez homogènes pour forcer un seul modèle rigide.
+
+Dependency map —
+
+La logique de dépendance, c’est : données d’architecture/programme → charges/débits/demandes → sélection d’équipements → dimensions de conduits/tuyaux/feeders → sommaires/tables → plans. Si on casse cette chaîne, on crée du rework.
+
+Comment AutoCAD devrait tirer les données d’Excel ? —
+
+Je veux que CAD lise des valeurs finales provenant d’Excel en lecture contrôlée. Je suis moins attaché à la technologie exacte qu’au principe de source unique. S’il faut commencer par un lien simple et robuste avant de viser plus automatisé, ça me va.
+
+À quelle fréquence les designs changent-ils ? —
+
+Les designs changent peu au début, puis très souvent dès qu’on entre en coordination active et en exécution. En pratique, il faut assumer des changements au moins hebdomadaires, et parfois quotidiens sur les projets chauds.
+
+Qui maintient le fichier Excel ? —
+
+Le fichier Excel devrait être maintenu par le responsable de discipline ou la personne désignée sur le projet, pas par moi seul. Moi, je veux garder la logique, la structure et la validation finale, pas devenir le data-entry bottleneck.
+
+Quelles formules/fonctions Excel sont utilisées actuellement ? —
+
+On serait surtout dans du Excel classique : IF, SUMIF/SUMIFS, XLOOKUP/INDEX-MATCH, validations de données, tables de référence, plus les formules propres aux pertes de charge, vitesses, charges et sélections. L’idée n’est pas d’être “smart”, c’est d’être robuste et lisible.
+
+Y a-t-il des calculs standards de l’industrie à automatiser ? —
+
+Oui : duct sizing, vitesses, pertes de charge, pipe sizing, drainage/venting de base, electrical load/demand, feeder sizing, vérifications d’équipement, et tout ce qui revient de projet en projet.
+
+Quelles règles de validation Excel devrait appliquer ? —
+
+Des règles simples mais dures : champs obligatoires, min/max, cohérence entre inputs et outputs, valeurs hors plage, mismatch entre sélection et charge, mismatch entre tableau et plan, et blocage si une donnée critique manque.
+
+Les 7 projets ont-ils tous des tables CAD à migrer ? —
+
+Je ne présumerais pas que les 7 projets sont tous migrables tels quels. Certains auront déjà des tables exploitables, d’autres seront trop brouillons ou trop avancés pour une migration propre. Il faut accepter un mix : migration complète, partielle ou projet témoin seulement.
+
+Quel projet devrait servir de pilote ? —
+
+Le pilote devrait être un projet répétitif, assez standard, avec peu d’exceptions. Mon instinct serait de commencer par un APH typique plutôt qu’une rénovation tordue ou un projet commercial atypique.
+
+Système 3 — Build AI Agent for Intelligent Review
+
+Quels fichiers l’agent doit-il lire ? —
+
+L’agent doit pouvoir lire au minimum : fichiers Excel de calcul, PDF de plans/devis, tâches et commentaires ClickUp, notes texte, sommaires/schedules exportés. La lecture native DWG est souhaitable, mais si je dois prioriser, je préfère d’abord des exports fiables que du DWG mal exploité.
+
+Comment les fichiers sont-ils organisés ? —
+
+Je veux une organisation par projet, avec un dossier de référence clair et une tâche/liste ClickUp correspondante. Aujourd’hui, l’information existe déjà entre ClickUp, Google Drive et les fichiers de projet; le but est de structurer ça, pas de créer une couche de plus.
+
+Must-have vs nice-to-have —
+
+Must-have : Excel, PDF, ClickUp, notes structurées. Nice-to-have : DWG natif, parsing avancé, liens bidirectionnels plus complexes.
+
+Aspects confidentiels/propriétaires à protéger ? —
+
+Oui. Il faut protéger les données clients, nos templates internes, nos hypothèses de design et tout ce qui relève de nos méthodes de travail. J'ai besoin de logs complets.
+
+Checklist de revue manuelle (20 choses) —
+
+Ma checklist mentale ressemble à ceci : 1) bonne version du projet, 2) bonnes hypothèses de base, 3) discipline/mandat bien compris, 4) architecture et structure à jour, 5) shafts disponibles, 6) locaux techniques suffisants, 7) accès d’entretien prévus, 8) sélection d’équipements cohérente, 9) charges cohérentes, 10) débits cohérents, 11) conduits/tuyaux/feeders cohérents, 12) drainage/condensats/vents cohérents, 13) coordination plafond/toiture, 14) murs/planchers coupe-feu traités, 15) tableaux/schedules cohérents avec les plans, 16) annotations essentielles présentes, 17) constructibilité acceptable, 18) conformité code/normes, 19) rien d’important laissé implicite, 20) est-ce que le projet est prêt à dessiner ou encore en train d’être pensé.
+
+Top 5 erreurs qui causent des redraws —
+
+coordination spatiale incomplète, 2) charges et sélections non alignées, 3) schedules non cohérents avec les plans, 4) changements tardifs d’architecture/programme/cuisine, 5) calculs validés trop tard dans le cycle.
+
+Quels codes/standards s’appliquent ? —
+
+Les standards applicables sont d’abord ceux du Québec et du Canada, puis les normes propres aux disciplines et aux manufacturiers selon le système. En pratique, je veux que l’agent priorise le code applicable, les normes canadiennes/CSA quand pertinentes, les exigences APH/énergie selon le mandat, puis les données manufacturier.
+
+Comment je valide les electrical load calcs, ductwork sizing et pipe sizing ? —
+
+Je valide les electrical load calcs en remontant les hypothèses, les charges connectées, la demande, le feeder et la protection. Je valide le ductwork en regardant les débits, vitesses, pertes de charge, choix d’appareils et cohérence spatiale. Je valide le pipe sizing avec les débits, unités de plomberie, vitesses, pentes, pertes de charge et contraintes d’implantation.
+
+Critique vs warning vs informatif —
+
+Critique = erreur qui rend le design faux, non conforme ou impossible à construire. Warning = point douteux ou incomplet qui peut encore être résolu sans tout refaire. Informatif = note utile, optimisation ou élément à surveiller sans bloquer la suite.
+
+L’agent devrait-il auto-suggérer des corrections ? —
+
+Oui, il peut suggérer des pistes de correction, mais il ne devrait rien modifier automatiquement. Il doit d’abord être un excellent réviseur, pas un designer autonome et par la suite s'il en a les capacités, nous lui confirmons qu'on veut qu'il s'occupe des modifications, mais c'est très important de backuper tout ce qu'on fait à chaque modification importante.
+
+Qui reçoit le résumé 1-page ? —
+
+Au début, le résumé 1-page devrait venir à moi d’abord. Une fois le système fiable, on peut aussi l’envoyer au préparateur ou au lead de discipline, mais je ne veux pas noyer l’équipe avec des faux positifs pendant la phase de rodage.
+
+Le read-only est-il suffisant ? — Oui, le read-only est suffisant pour démarrer. C’est même préférable. Si l’agent lit bien, juge bien et log bien, on n’a pas besoin de lui donner des droits d’écriture pour créer de la valeur.
+
+L’agent devrait-il créer un fichier de log de revue ? —
+
+Oui. Idéalement un log par projet et par passe de validation. Je veux garder une trace de ce qui a été vu, bloqué, toléré et corrigé.
+
+As-tu 10-20 projets complétés pour entraîner l’agent ? —
+
+Oui, largement. J’ai assez de projets complétés et de revues passées pour constituer un dataset de départ. Par contre, il faudra le curer, parce que tout ce qui existe n’est pas directement propre à l’entraînement.
+
+L’agent devrait-il être ajusté par type de projet ? —
+
+Oui, absolument. Un APH répétitif, un mandat commercial, une rénovation ou un projet énergétique ne se révisent pas avec exactement les mêmes lunettes.
+
+Système 4 — Clean Up ClickUp
+
+Décris-moi ton organisation ClickUp —
+
+Mon organisation ClickUp est basée sur un espace d’équipe avec des dossiers projets par année (Projets-2021 à Projets-2026), où chaque liste correspond à un projet. À côté de ça, j’ai des listes transversales comme Tâches en cours, Storage, Admin, Interne, ainsi qu’une liste Codes et normes. J’ai aussi déjà une zone de doublons pour nettoyer sans perdre d’info trop vite.
+
+Sur 100 tâches, combien sont du bruit vs actionnables ? —
+
+Sur 100 tâches, je dirais qu’environ 30 à 40 sont vraiment actionnables et prioritaires, et que 60 à 70 relèvent du bruit : doublons, suivis périmés, tâches d’attente, notifications transformées en tâches, ou éléments qui devraient être archivés/fermés. Le vrai problème n’est pas juste le volume, c’est que les taches actionnables doivent être fermés manuellement lorsqu'on termine quelque chose. Le système actuel n'as aucun moyen de savoir quand il faut les fermer. Ça viendra plus tard.
+
+Mini synthèse réutilisable en intro
+
+Mon objectif n’est pas juste d’automatiser systématiquement les calculs. Mon objectif est de verrouiller la séquence coordination → calcul → dessin, parce que c’est là que se crée aujourd’hui le plus de rework. Je veux un système simple pour l’équipe, assez structuré pour enlever les oublis, et assez intelligent pour que je ne sois plus le seul filtre final sur tout.
+
+Plus tard on intégrera des automations lorsqu'on aura un système fiable et que les modèles iA feront moins d'erreures

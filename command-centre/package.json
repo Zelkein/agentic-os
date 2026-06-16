@@ -1,0 +1,48 @@
+{
+  "name": "agentic-os",
+  "version": "1.0.0",
+  "description": "Turn Claude Code into your Agentic Operating System.",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/predev.cjs",
+    "dev": "node scripts/next-run.cjs dev",
+    "build": "node scripts/next-run.cjs build",
+    "start": "node scripts/next-run.cjs start",
+    "lint": "next lint",
+    "test:cron": "node --no-deprecation --test src/lib/cron-runtime.test.cjs src/lib/process-manager.test.cjs src/lib/queue-watcher.test.cjs src/lib/plan-review-flows.test.cjs src/lib/permission-prompt-mcp.test.cjs src/lib/task-chat.test.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonc602/agentic-os.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "better-sqlite3": "^12.11.1",
+    "chokidar": "^5.0.0",
+    "croner": "^10.0.1",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.1",
+    "gray-matter": "^4.0.3",
+    "lightningcss": "^1.32.0",
+    "lucide-react": "^1.7.0",
+    "next": "^16.2.1",
+    "pdfjs-dist": "^5.6.205",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "tailwindcss": "^4.2.2",
+    "tesseract.js": "^7.0.0",
+    "typescript": "^5.9.3",
+    "zustand": "^5.0.13"
+  }
+}

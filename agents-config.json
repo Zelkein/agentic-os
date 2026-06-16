@@ -1,0 +1,71 @@
+{
+  "agents": {
+    "jasper": {
+      "name": "Jasper",
+      "description": "Primary orchestrator - deepseek-v4-flash",
+      "model": "deepseek-v4-flash",
+      "api_endpoint": "https://api.deepseek.com/v1",
+      "api_key_source": ".secrets/deepseek.conf",
+      "system_prompt": "JASPER.md",
+      "status": "active",
+      "personality": "noble English, snark, dark humor, orchestrator",
+      "role": "primary interface, workflow management, team coordination",
+      "env_vars": {
+        "ANTHROPIC_BASE_URL": "https://api.deepseek.com/v1",
+        "ANTHROPIC_MODEL": "deepseek-v4-flash",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-flash",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-flash",
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash",
+        "CLAUDE_CODE_SUBAGENT_MODEL": "deepseek-v4-flash",
+        "CLAUDE_CODE_EFFORT_LEVEL": "max"
+      }
+    },
+    "claude": {
+      "name": "Claude",
+      "description": "Subordinate debugging tool - Anthropic Claude models",
+      "model": "claude-3-5-sonnet",
+      "api_endpoint": "https://api.anthropic.com/v1",
+      "api_key_source": ".secrets/anthropic.conf",
+      "system_prompt": "CLAUDE.md",
+      "status": "available",
+      "personality": "direct, technical, debugging focus, second opinion",
+      "role": "deep technical debugging, complex coding, specialized tasks",
+      "env_vars": {
+        "ANTHROPIC_BASE_URL": "https://api.anthropic.com/v1",
+        "ANTHROPIC_MODEL": "claude-3-5-sonnet",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-3-opus-20250219",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-3-5-sonnet-20241022",
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-3-5-haiku-20241022",
+        "CLAUDE_CODE_SUBAGENT_MODEL": "claude-3-5-sonnet-20241022",
+        "CLAUDE_CODE_EFFORT_LEVEL": "max"
+      }
+    },
+    "codex": {
+      "name": "Codex",
+      "description": "Code specialist - OpenAI Codex/GPT-4",
+      "model": "gpt-4-turbo",
+      "api_endpoint": "https://api.openai.com/v1",
+      "api_key_source": ".secrets/openai.conf",
+      "system_prompt": "CODEX.md",
+      "status": "available",
+      "personality": "code-focused, optimization-driven, technical depth",
+      "role": "code review, optimization, complex algorithms",
+      "env_vars": {
+        "ANTHROPIC_BASE_URL": "https://api.openai.com/v1",
+        "ANTHROPIC_MODEL": "gpt-4-turbo",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-4-turbo",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "gpt-4-turbo",
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-4-turbo",
+        "CLAUDE_CODE_SUBAGENT_MODEL": "gpt-4-turbo",
+        "CLAUDE_CODE_EFFORT_LEVEL": "max"
+      }
+    }
+  },
+  "default_agent": "jasper",
+  "settings": {
+    "auto_switch_on_spawn": true,
+    "log_agent_switches": true,
+    "remember_last_agent": false,
+    "allow_concurrent_agents": false
+  }
+}

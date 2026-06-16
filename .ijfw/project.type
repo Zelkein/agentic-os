@@ -1,0 +1,39 @@
+{
+  "type": "software",
+  "primary_type": "software",
+  "secondary_types": [],
+  "confidence": 0.907,
+  "scan_incomplete": false,
+  "detected_at": "2026-06-08T04:01:32.147Z",
+  "signals": [
+    {
+      "kind": "manifest",
+      "weight": 0.9,
+      "manifests": [
+        "package.json",
+        "package.json",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "kind": "dir_design",
+      "weight": 0.4,
+      "name": "assets"
+    },
+    {
+      "kind": "dir_design",
+      "weight": 0.4,
+      "name": "assets"
+    },
+    {
+      "kind": "file_extension_ratio",
+      "weight": 0.7,
+      "domain": "software",
+      "ratio": 0.999,
+      "count": 854
+    }
+  ],
+  "fallback_reason": null,
+  "file_tree_hash": "e7abf33961714916",
+  "branch_hash": "f921bd05e68b0374"
+}

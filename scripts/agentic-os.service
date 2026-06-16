@@ -1,0 +1,25 @@
+[Unit]
+Description=Agentic OS - Command Centre
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=zelkein
+Group=zelkein
+WorkingDirectory=/home/zelkein/agentic-os/command-centre
+EnvironmentFile=-/home/zelkein/agentic-os/command-centre/.env
+
+ExecStart=/home/zelkein/agentic-os/scripts/start-service.sh
+
+Restart=on-failure
+RestartSec=10
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+# Security
+NoNewPrivileges=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

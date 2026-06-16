@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "last_run_at": 1780934416036,
+  "runs_total": 2,
+  "stages": {
+    "journal_summary": {
+      "status": "completed",
+      "started_at": 1780934415887,
+      "completed_at": 1780934415911,
+      "entries": 3,
+      "sessions": 3
+    },
+    "tier_promotion": {
+      "status": "skipped",
+      "started_at": 1780934415924,
+      "completed_at": 1780934415946,
+      "skipped": "no-op"
+    },
+    "wiki-compile": {
+      "status": "skipped",
+      "started_at": 1780934415962,
+      "completed_at": 1780934415980,
+      "skipped": "db-unavailable"
+    },
+    "mark_completed_legacy": {
+      "status": "completed",
+      "started_at": 1780934415993,
+      "completed_at": 1780934416021,
+      "ok": true
+    }
+  }
+}
